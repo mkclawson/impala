@@ -10,8 +10,11 @@ main .hero-container {
   
 main .hero {
   position: relative;
-  padding: 32px;
-  min-height: 300px;
+  padding: 0px;
+  min-height: 500px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 0px;
 }
 
 main .hero h1 {
