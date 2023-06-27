@@ -162,7 +162,8 @@ header nav .nav-sections {
 }
 
 header nav[aria-expanded="true"] .nav-sections {
-  display: block;
+  display: flex;
+  justify-content: flex-end;
   visibility: visible;
   align-self: start;
 }
