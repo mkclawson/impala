@@ -14,13 +14,13 @@
   /* colors */
   --link-color: #035fe6;
   --link-hover-color: #136ff6;
-  --background-color: #000000;
+  --background-color: #000;
   --overlay-background-color: #eee;
   --highlight-background-color: #ccc;
   --text-color: white;
 
   /* fonts */
-  --body-font-family: 'Playfair display', Didot, Raleway, roboto, noto, sans-serif;
+  --body-font-family: 'helvetica neue', helvetica, ubuntu, roboto, noto, sans-serif;
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
