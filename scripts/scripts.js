@@ -19,6 +19,7 @@ const LCP_BLOCKS = []; // add your LCP blocks to the list
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
  */
+/*
 function buildHeroBlock(main) {
   const h1 = main.querySelector('h1');
   const picture = main.querySelector('picture');
@@ -29,12 +30,21 @@ function buildHeroBlock(main) {
     main.prepend(section);
   }
 }
-
+*/
 /**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
  */
-
+/*
+function buildAutoBlocks(main) {
+ try {
+   buildHeroBlock(main);
+ } catch (error) {
+   // eslint-disable-next-line no-console
+   console.error('Auto Blocking failed', error);
+ }
+}
+*/
 /**
  * Decorates the main element.
  * @param {Element} main The main element
