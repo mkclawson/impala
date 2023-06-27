@@ -20,7 +20,8 @@
   --text-color: white;
 
   /* fonts */
-  --body-font-family: 'helvetica neue', helvetica, ubuntu, roboto, noto, sans-serif;
+  /*--body-font-family: 'helvetica neue', helvetica, ubuntu, roboto, noto, sans-serif;*/
+  --body-font-family: 'Playfair display', 'Didot', 'Raleway', roboto, noto, sans-serif;
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
