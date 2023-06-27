@@ -58,6 +58,7 @@ body {
   margin: 0;
   font-family: var(--body-font-family);
   line-height: 1.6;
+  text-align: center;
   color: var(--text-color);
   background-color: var(--background-color);
   display: none;
