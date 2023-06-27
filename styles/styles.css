@@ -242,3 +242,7 @@ main .section {
 main .section.highlight {
   background-color: var(--highlight-background-color);
 }
+
+#coming-back-summer-of-2022{
+font-size: 70px;
+}
