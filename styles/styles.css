@@ -248,7 +248,7 @@ main .section.highlight {
 font-size: 70px;
 }
 
-#coming-back-summer-of-2022, #come-experience-baby-in-person {
+main > .section > h1 {
   font-weight: normal;
 }
 
