@@ -12,3 +12,9 @@ footer .footer {
 footer .footer p {
   margin: 0;
 }
+
+.footer > img {
+  width: 20px;
+  aspect-ratio: auto 20 / 17;
+  height: 17px;
+}
