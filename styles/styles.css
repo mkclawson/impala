@@ -263,6 +263,7 @@ main > .section > .default-content-wrapper > h4 {
 
   main > .section > .default-content-wrapper > h3 {
   font-size: 20px;
-  font: "didot-w05-italic";
+  font-family: 'GFS Didot', serif;
+  font-style: italic;
 }
 
