@@ -257,12 +257,12 @@ main > .section > .default-content-wrapper > h1 {
 main > .section > .default-content-wrapper > h4 {
   font-weight: normal;
   font-size: 15px;
-  font: normal normal normal 14px/1.79em raleway,sans-serif;
+  font: sans-serif;
   }
 
 
   main > .section > .default-content-wrapper > h3 {
   font-size: 20px;
-  font: "normal normal normal 20px/1.67em didot-w01-italic,didot-w05-italic,serif";
+  font: didot-w05-italic;
 }
 
