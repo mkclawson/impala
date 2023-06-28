@@ -257,8 +257,7 @@ main > .section > .default-content-wrapper > h1 {
 main > .section > .default-content-wrapper > h4 {
   font-weight: normal;
   font-size: 15px;
-  /* stylelint-disable-next-line declaration-no-important */
-  font-family: 'Raleway', sans-serif;
+  font-family: Raleway, sans-serif;
   letter-spacing: 2px;
   line-height: 1.6;
   }

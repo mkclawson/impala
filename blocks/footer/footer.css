@@ -2,8 +2,7 @@ footer {
   padding: 2rem;
   background-color: var(--overlay-background-color);
   font-size: var(--body-font-size-xs);
-  /* stylelint-disable-next-line declaration-no-important */
-  font-family: 'Raleway', sans-serif;
+  font-family: Raleway, sans-serif;
 }
 
 footer .footer {
