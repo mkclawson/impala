@@ -20,7 +20,8 @@
   --text-color: white;
 
   /* fonts */
-  /*--body-font-family: 'helvetica neue', helvetica, ubuntu, roboto, noto, sans-serif;*/
+
+  /* --body-font-family: 'helvetica neue', helvetica, ubuntu, roboto, noto, sans-serif; */
   --body-font-family: 'Playfair display', 'Didot', 'Raleway', roboto, noto, sans-serif;
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
@@ -76,7 +77,8 @@ header {
 h1, h2, h3,
 h4, h5, h6 {
   font-family: var(--heading-font-family);
-  /*font-weight: 600;*/
+
+  /* font-weight: 600; */
   line-height: 1.25;
   margin-top: 1em;
   margin-bottom: .5em;
@@ -261,6 +263,6 @@ main > .section > .default-content-wrapper > h4 {
 
   main > .section > .default-content-wrapper > h3 {
   font-size: 20px;
-  font: normal normal normal 20px/1.67em didot-w01-italic,didot-w05-italic,serif;
+  font: "normal normal normal 20px/1.67em didot-w01-italic,didot-w05-italic,serif";
 }
 
