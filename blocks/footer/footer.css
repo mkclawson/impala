@@ -1,7 +1,8 @@
 footer {
   padding: 2rem;
   background-color: var(--overlay-background-color);
-  font-size: var(--body-font-size-s);
+  font-size: var(--body-font-size-xs);
+  font-family: Raleway, sans-serif;
 }
 
 footer .footer {
@@ -11,4 +12,10 @@ footer .footer {
 
 footer .footer p {
   margin: 0;
+}
+
+.footer img {
+  width: 20px;
+  aspect-ratio: auto 20 / 17;
+  height: 17px;
 }
