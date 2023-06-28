@@ -257,7 +257,7 @@ main > .section > .default-content-wrapper > h1 {
 main > .section > .default-content-wrapper > h4 {
   font-weight: normal;
   font-size: 15px;
-  font: "sans-serif";
+  font-family: 'Raleway', sans-serif;
   }
 
 
