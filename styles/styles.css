@@ -17,7 +17,7 @@
   --background-color: #FFFFFF;
   --overlay-background-color: #000;
   --highlight-background-color: #ccc;
-  --text-color: white;
+  --text-color: #000;
 
   /* fonts */
 
@@ -248,6 +248,7 @@ main .section.highlight {
 
 body.home{
   background-color: #000000;
+  color: #000;
 }
 
 main > .section > .default-content-wrapper > h1 {
