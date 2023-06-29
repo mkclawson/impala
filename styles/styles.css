@@ -14,7 +14,7 @@
   /* colors */
   --link-color: #035fe6;
   --link-hover-color: #136ff6;
-  --background-color: #000;
+  --background-color: #FFFFFF;
   --overlay-background-color: #000;
   --highlight-background-color: #ccc;
   --text-color: white;
@@ -244,6 +244,10 @@ main .section {
 /* section metadata */
 main .section.highlight {
   background-color: var(--highlight-background-color);
+}
+
+body.HomepageBG{
+  background-color: black;
 }
 
 main > .section > .default-content-wrapper > h1 {
