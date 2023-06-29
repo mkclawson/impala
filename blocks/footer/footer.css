@@ -3,7 +3,6 @@ footer {
   background-color: var(--overlay-background-color);
   font-size: var(--body-font-size-xs);
   font-family: Raleway, sans-serif;
-  color: #ffff;
 }
 
 footer .footer {

@@ -4,7 +4,6 @@ header .nav-wrapper {
   width: 100%;
   z-index: 2;
   position: fixed;
-  color: #ffff;
 }
 
 header nav {
