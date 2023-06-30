@@ -14,7 +14,7 @@
   /* colors */
   --link-color: #035fe6;
   --link-hover-color: #136ff6;
-  --background-color: #FFFFFF;
+  --background-color: #FFF;
   --overlay-background-color: #000;
   --highlight-background-color: #ccc;
   --text-color: #000;
@@ -247,8 +247,8 @@ main .section.highlight {
 }
 
 body.home{
-  background-color: #000000;
-  color: #FFFFFF;
+  background-color: #000;
+  color: #FFF;
 }
 
 main > .section > .default-content-wrapper > h1 {
