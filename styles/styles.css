@@ -18,6 +18,14 @@
   --overlay-background-color: #000;
   --highlight-background-color: #ccc;
   --text-color: #000;
+  --text-white: #fff;
+  --text-red: #eb3300;
+  --text-red-hover: #ea6d4b;
+  --text-grey: #999;
+  --text-purple: #7E5475;
+  --text-blue-light: #589199;
+  --text-pink: #a30050;
+  --text-green: #69923a;
 
   /* fonts */
 
@@ -247,8 +255,8 @@ main .section.highlight {
 }
 
 body.home{
-  background-color: #000;
-  color: #FFF;
+  background-color: var(--text-color);
+  color: var(--text-white);
 }
 
 main > .section > .default-content-wrapper > h1 {
