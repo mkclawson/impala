@@ -216,7 +216,7 @@ main blockquote p::after {
 }
 
 main img {
-  max-width: 100%;
+  max-width: 60%;
   width: auto;
   height: auto;
 }
@@ -282,3 +282,15 @@ main > .section > .default-content-wrapper > h4 {
   font-style: italic;
 }
 
+main > .section > .default-content-wrapper > h2 {
+  max-width: 60%;
+  margin: auto;
+  text-align: left;
+}
+
+main > .section > .default-content-wrapper > p {
+  max-width: 60%;
+  margin: auto;
+  text-align: left;
+  margin-top: 30px;
+}
