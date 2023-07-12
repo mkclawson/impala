@@ -31,8 +31,4 @@
     order: unset;
 
   }
-
-  .section .columns-6-cols {
-    max-width: 1200px;
-  }
 }
