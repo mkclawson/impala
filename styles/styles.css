@@ -293,4 +293,5 @@ main > .section > .default-content-wrapper > p {
   margin: auto;
   text-align: left;
   margin-top: 30px;
+  font-size: var(--body-font-size-s);
 }
