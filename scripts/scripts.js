@@ -23,7 +23,6 @@ const LCP_BLOCKS = []; // add your LCP blocks to the list
 function buildHeroBlock(main) {
   const h1 = main.querySelector('h1');
   const picture = main.querySelector('picture');
-  console.log(picture.closest('h1'));
   // eslint-disable-next-line no-bitwise
   if (h1 && picture && (!h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
     const section = document.createElement('div');
@@ -39,9 +38,7 @@ function buildHeroBlock(main) {
 
 function buildAutoBlocks(main) {
   try {
-    const heroelement = main.querySelector('.hero-container');
-    const h1element = heroelement.nextElementSibling.querySelector('h1');
-    if (!h1element) buildHeroBlock(main);
+    buildHeroBlock(main);
   } catch (error) {
     // eslint - disable - next - line no - console
     console.error('Auto Blocking failed', error);
