@@ -259,6 +259,13 @@ body.home{
   color: var(--text-white);
 }
 
+body.blog h1{
+  font-size: 35px;
+  max-width: 60%;
+  text-align: left;
+  margin: auto;
+}
+
 main > .section > .default-content-wrapper > h1 {
   font-weight: normal;
 }
