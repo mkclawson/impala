@@ -295,3 +295,14 @@ main > .section > .default-content-wrapper > p {
   margin-top: 30px;
   font-size: var(--body-font-size-s);
 }
+
+.blog main > .section > .default-content-wrapper > h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+}
+
+.blog main > .section > .default-content-wrapper > p {
+  font-size: 18px;
+  font-family: 'GFS Didot', serif;
+  font-style: italic;
+}
