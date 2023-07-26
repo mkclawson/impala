@@ -20,13 +20,13 @@
 }
 
 @media (min-width: 900px) {
-  .columns>div {
+  .columns > div {
     align-items: center;
     flex-direction: unset;
     gap: 32px;
   }
 
-  .columns>div>div {
+  .columns > div > div {
     flex: 1;
     order: unset;
 

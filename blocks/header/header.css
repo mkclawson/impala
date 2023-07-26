@@ -54,7 +54,7 @@ header nav p {
 }
 
 header nav a:any-link {
-  color: var(--text-white);
+  color: #FFF;
 }
 
 /* hamburger */
