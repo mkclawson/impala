@@ -217,6 +217,7 @@ main img {
   display: inline-block;
   height: 24px;
   width: 24px;
+  line-height: 2;
 }
 
 .icon svg {
