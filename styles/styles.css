@@ -18,6 +18,14 @@
   --overlay-background-color: #000;
   --highlight-background-color: #ccc;
   --text-color: #000;
+  --text-white: #fff;
+  --text-red: #eb3300;
+  --text-red-hover: #ea6d4b;
+  --text-grey: #999;
+  --text-purple: #7E5475;
+  --text-blue-light: #589199;
+  --text-pink: #a30050;
+  --text-green: #69923a;
 
   /* fonts */
 
@@ -248,8 +256,8 @@ main .section.highlight {
 }
 
 body.home{
-  background-color: #000;
-  color: #FFF;
+  background-color: var(--text-color);
+  color: var(--text-white);
 }
 
 main > .section > .default-content-wrapper > h1 {
@@ -275,3 +283,27 @@ main > .section > .default-content-wrapper > h4 {
   font-style: italic;
 }
 
+main > .section > .default-content-wrapper > h2 {
+  max-width: 60%;
+  margin: auto;
+  text-align: left;
+}
+
+main > .section > .default-content-wrapper > p {
+  max-width: 60%;
+  margin: auto;
+  text-align: left;
+  margin-top: 30px;
+  font-size: var(--body-font-size-s);
+}
+
+.blog main > .section > .default-content-wrapper > h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+}
+
+.blog main > .section > .default-content-wrapper > p {
+  font-size: 18px;
+  font-family: 'GFS Didot', serif;
+  font-style: italic;
+}
