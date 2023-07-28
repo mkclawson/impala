@@ -1,0 +1,14 @@
+.block.blogintro > div {
+    width: 750px;
+    height: auto;
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+    max-width: 60%;
+    margin: auto;
+}
+
+.block.blogintro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+}
