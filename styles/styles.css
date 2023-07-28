@@ -308,7 +308,7 @@ main > .section > .default-content-wrapper > p {
   font-style: italic;
 }
 
-.blog main > .section > .default-content-wrapper > img {
+.blog main > .section > .default-content-wrapper img {
   max-width: 100%;
   width: 750px;
   height: auto;
