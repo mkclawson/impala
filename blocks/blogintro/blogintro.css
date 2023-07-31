@@ -8,6 +8,12 @@
     margin: auto;
 }
 
+.block.blogintro > div:first-child {
+margin-bottom: 5vh;
+margin-left: 25vw;
+}
+
+
 .block.blogintro h2 {
     font-family: 'Playfair Display', serif;
     font-size: 28px;
