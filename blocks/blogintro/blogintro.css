@@ -11,4 +11,11 @@
 .block.blogintro h2 {
     font-family: 'Playfair Display', serif;
     font-size: 28px;
+    font-style: normal;
+}
+
+.block.blogintro > div > div {
+    font-size: 14px;
+    font-family: 'GFS Didot', serif;
+    font-style: italic;
 }
