@@ -8,11 +8,16 @@
     margin: auto;
 }
 
-.block.blogintro > div:first-child {
-margin-bottom: 5vh;
-margin-left: 25vw;
+.block.blogintro > div > div {
+    font-size: 14px;
+    font-family: 'GFS Didot', serif;
+    font-style: italic;
 }
 
+.block.blogintro > div:first-child {
+margin-bottom: 3vh;
+margin-left: 20vw;
+}
 
 .block.blogintro h2 {
     font-family: 'Playfair Display', serif;
@@ -20,8 +25,3 @@ margin-left: 25vw;
     font-style: normal;
 }
 
-.block.blogintro > div > div {
-    font-size: 14px;
-    font-family: 'GFS Didot', serif;
-    font-style: italic;
-}
