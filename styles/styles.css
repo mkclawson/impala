@@ -316,3 +316,29 @@ main > .section > .default-content-wrapper > p {
   width: 750px;
   height: auto;
 }
+
+.blog main .section {
+  padding: 10px 32px 64px;
+}
+
+.blog main .autoblog.block {
+  padding: 64px 32px 10px;
+}
+
+.blog main .autoblog.block > div > div {
+  display: flex;
+  flex-direction: row;
+  width: 750px;
+  height: auto;
+  gap: 20px;
+  font-size: 14px;
+  max-width: 60%;
+  margin: auto;
+  margin-bottom: 2vh;
+  margin-left: 15vw;
+}
+
+.blog main .autoblog.block > div > div > div {
+  font-family: 'GFS Didot', serif;
+  font-style: italic;
+}
