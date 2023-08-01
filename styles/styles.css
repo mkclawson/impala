@@ -317,6 +317,14 @@ main > .section > .default-content-wrapper > p {
   height: auto;
 }
 
+.blog main .section {
+  padding: 10px 32px 64px;
+}
+
+.blog main .autoblog.block {
+  padding: 64px 32px 10px;
+}
+
 .blog main .autoblog.block > div > div {
   display: flex;
   flex-direction: row;
