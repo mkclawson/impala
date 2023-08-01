@@ -343,7 +343,9 @@ main > .section > .default-content-wrapper > p {
   max-width: 60%;
   margin: auto;
   margin-bottom: 2vh;
-  margin-left: 15vw;
+  justify-content: left;
+  position: relative;
+  left: 3vw;
 }
 
 .blog main .autoblog.block > div > div > div {
