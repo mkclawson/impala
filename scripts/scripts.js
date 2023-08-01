@@ -31,12 +31,31 @@ function buildHeroBlock(main) {
   }
 }
 
+// used to add 3rd party embed js files to the head
+// TODO: keep an eye on lighthouse scores for this
+export function loadScript(url, callback, type, async) {
+  const head = document.querySelector('head');
+  const script = document.createElement('script');
+  script.src = url;
+  if (async) {
+    script.async = true;
+  }
+  if (type) {
+    script.setAttribute('type', type);
+  }
+  script.onload = callback;
+  head.append(script);
+  return script;
+}
+
 /**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
  */
 
 function buildAutoBlocks(main) {
+  const container = document.querySelector('main div');
+  container.append(buildBlock('social-share', '<p>Share this blog post</p>'));
   try {
     buildHeroBlock(main);
   } catch (error) {
