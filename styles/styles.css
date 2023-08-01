@@ -342,3 +342,10 @@ main > .section > .default-content-wrapper > p {
   font-family: 'GFS Didot', serif;
   font-style: italic;
 }
+
+
+.blog main .autoblog.block > div > div > div:not(:last-of-type)::after {
+  content: "\2022";
+  position: relative;
+  left: 10px;
+}
