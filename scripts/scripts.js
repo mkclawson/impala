@@ -32,25 +32,24 @@ function buildHeroBlock(main) {
   }
 }
 
-function buildautoblogBlock(main) {
+function buildAutoblogBlock(main) {
   const h1 = main.querySelector('h1');
   if (h1 && (getMetadata('template') === 'blog')) {
-    console.log('This is valid for Autoblogging');
     const authorcontent = getMetadata('author');
     const publishedcontent = getMetadata('published');
     const readcontent = getMetadata('readtime');
     const section = document.createElement('div');
     const elems = [authorcontent, publishedcontent, readcontent];
     const subsection1 = document.createElement('div');
-    elems.forEach((x, i) => { const col = document.createElement('div'); col.textContent = x; subsection1.appendChild(col); });
+    elems.forEach((x) => { const col = document.createElement('div'); col.textContent = x; subsection1.appendChild(col); });
     section.appendChild(subsection1);
     subsection1.after(h1);
-    const updatedcontent = getMetadata('updated');
-    if (updatedcontent) {
-      const subsection2 = document.createElement('div');
-      subsection2.textContent = 'Updated: ' + `${updatedcontent}`;
-      h1.after(subsection2);
-    }
+    // const updatedcontent = getMetadata('updated');
+    // if (updatedcontent) {
+    //   const subsection2 = document.createElement('div');
+    //   subsection2.textContent = 'Updated: ' + `${updatedcontent}`;
+    //   h1.after(subsection2);
+    // }
     main.prepend(section);
     section.classList.add('autoblog');
     section.classList.add('block');
@@ -70,10 +69,10 @@ function buildAutoBlocks(main) {
     console.error('Auto Blocking failed', error);
   }
   try {
-    buildautoblogBlock(main);
+    buildAutoblogBlock(main);
   } catch (error) {
     // eslint-disable-next-line no-console
-    console.error('Auto Blog failed', error);
+    console.error('Auto Blocking failed', error);
   }
 }
 
