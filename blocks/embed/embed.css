@@ -1,0 +1,80 @@
+main .embed {
+  width: unset;
+  text-align: center;
+  max-width: 800px;
+}
+
+main .embed > div {
+  display: flex;
+  justify-content: center;
+}
+
+main .embed figure.video {
+  margin: 0;
+}
+
+main .embed video.video-embed-item {
+  max-width: 800px;
+}
+
+main .embed.embed-facebook {
+  margin-top: 25px;
+}
+
+main .embed.embed-facebook > div {
+  justify-content: left;
+}
+
+main .embed.embed-youtube-com-user > div {
+  display: flex !important;
+  justify-content: left;
+}
+
+main .embed .embed-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  position: relative;
+}
+
+main .embed .embed-placeholder > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+main .embed .embed-placeholder picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main .embed .embed-placeholder-play button {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(3);
+  width: 22px;
+  height: 22px;
+  border: 2px solid;
+  border-radius: 20px;
+  padding: 0;
+}
+
+main .embed .embed-placeholder-play button::before {
+  content: '';
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 0;
+  height: 10px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 6px solid;
+  top: 4px;
+  left: 7px;
+}

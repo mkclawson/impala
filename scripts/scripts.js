@@ -32,6 +32,23 @@ function buildHeroBlock(main) {
   }
 }
 
+// used to add 3rd party embed js files to the head
+// TODO: keep an eye on lighthouse scores for this
+export function loadScript(url, callback, type, async) {
+  const head = document.querySelector('head');
+  const script = document.createElement('script');
+  script.src = url;
+  if (async) {
+    script.async = true;
+  }
+  if (type) {
+    script.setAttribute('type', type);
+  }
+  script.onload = callback;
+  head.append(script);
+  return script;
+}
+
 function buildAutoblogBlock(main) {
   const h1 = main.querySelector('h1');
   if (h1 && (getMetadata('template') === 'blog')) {
@@ -41,7 +58,11 @@ function buildAutoblogBlock(main) {
     const section = document.createElement('div');
     const elems = [authorcontent, publishedcontent, readcontent];
     const subsection1 = document.createElement('div');
-    elems.forEach((x) => { const col = document.createElement('div'); col.textContent = x; subsection1.appendChild(col); });
+    elems.forEach((x) => {
+      const col = document.createElement('div');
+      col.textContent = x;
+      subsection1.appendChild(col);
+    });
     section.appendChild(subsection1);
     subsection1.after(h1);
     // const updatedcontent = getMetadata('updated');
@@ -62,6 +83,8 @@ function buildAutoblogBlock(main) {
  */
 
 function buildAutoBlocks(main) {
+  const container = document.querySelector('main div');
+  container.append(buildBlock('social-share', '<p>Share this blog post</p>'));
   try {
     buildHeroBlock(main);
   } catch (error) {
