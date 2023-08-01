@@ -1,3 +1,6 @@
-.autoblog {
+/* block specific CSS goes here */
+
+.blog main .autoblog.block > div > div {
     display: flex;
-}
+    flex-direction: row;
+  }

@@ -44,12 +44,6 @@ function buildAutoblogBlock(main) {
     elems.forEach((x) => { const col = document.createElement('div'); col.textContent = x; subsection1.appendChild(col); });
     section.appendChild(subsection1);
     subsection1.after(h1);
-    // const updatedcontent = getMetadata('updated');
-    // if (updatedcontent) {
-    //   const subsection2 = document.createElement('div');
-    //   subsection2.textContent = 'Updated: ' + `${updatedcontent}`;
-    //   h1.after(subsection2);
-    // }
     main.prepend(section);
     section.classList.add('autoblog');
     section.classList.add('block');
