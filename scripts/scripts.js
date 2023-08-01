@@ -58,7 +58,11 @@ function buildAutoblogBlock(main) {
     const section = document.createElement('div');
     const elems = [authorcontent, publishedcontent, readcontent];
     const subsection1 = document.createElement('div');
-    elems.forEach((x) => { const col = document.createElement('div'); col.textContent = x; subsection1.appendChild(col); });
+    elems.forEach((x) => {
+      const col = document.createElement('div');
+      col.textContent = x;
+      subsection1.appendChild(col);
+    });
     section.appendChild(subsection1);
     subsection1.after(h1);
     // const updatedcontent = getMetadata('updated');
@@ -71,6 +75,7 @@ function buildAutoblogBlock(main) {
     section.classList.add('autoblog');
     section.classList.add('block');
   }
+}
 
 /**
  * Builds all synthetic blocks in a container element.
