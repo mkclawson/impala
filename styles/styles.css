@@ -303,7 +303,7 @@ main > .section > .default-content-wrapper > p {
   margin: auto;
   max-width: 60%;
   text-align: left;
-  margin-top: 10vh;
+  margin-top: 5vh;
 }
 
 .blog main > .section > .default-content-wrapper > p:first-of-type {
