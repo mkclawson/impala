@@ -303,20 +303,20 @@ main > .section > .default-content-wrapper > p {
   margin: auto;
   max-width: 60%;
   text-align: left;
-  margin-top: 5vh;
+  margin-top: 20px;
 }
 
-.blog main > .section > .default-content-wrapper > p:first-of-type {
+.blog main > .section > .default-content-wrapper > p {
+  font-size: 18px;
+  font-family: 'GFS Didot', serif;
+  font-style: italic;
+}
+
+.blog main > .section > .default-content-wrapper > p:first-child:nth-last-child(3) {
   font-family: 'GFS Didot', serif;
   font-style: italic;
   font-size: 14px;
   margin-top: 0;
-}
-
-.blog main > .section > .default-content-wrapper > p:not(:first-of-type) {
-  font-size: 18px;
-  font-family: 'GFS Didot', serif;
-  font-style: italic;
 }
 
 .blog main > .section > .default-content-wrapper img {
