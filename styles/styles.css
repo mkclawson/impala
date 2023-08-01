@@ -326,8 +326,8 @@ main > .section > .default-content-wrapper > p {
   font-size: 14px;
   max-width: 60%;
   margin: auto;
-  margin-bottom: 5vh;
-  margin-left: 20vw;
+  margin-bottom: 2vh;
+  margin-left: 15vw;
 }
 
 .blog main .autoblog.block > div > div > div {
