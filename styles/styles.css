@@ -303,9 +303,17 @@ main > .section > .default-content-wrapper > p {
   margin: auto;
   max-width: 60%;
   text-align: left;
+  margin-top: 10vh;
 }
 
-.blog main > .section > .default-content-wrapper > p {
+.blog main > .section > .default-content-wrapper > p:first-of-type {
+  font-family: 'GFS Didot', serif;
+  font-style: italic;
+  font-size: 14px;
+  margin-top: 0;
+}
+
+.blog main > .section > .default-content-wrapper > p:not(:first-of-type) {
   font-size: 18px;
   font-family: 'GFS Didot', serif;
   font-style: italic;
