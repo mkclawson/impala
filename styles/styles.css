@@ -297,9 +297,12 @@ main > .section > .default-content-wrapper > p {
   font-size: var(--body-font-size-s);
 }
 
-.blog main > .section > .default-content-wrapper > h2 {
+.blog main > .section > .default-content-wrapper > h1 {
   font-family: 'Playfair Display', serif;
   font-size: 28px;
+  margin: auto;
+  max-width: 60%;
+  text-align: left;
 }
 
 .blog main > .section > .default-content-wrapper > p {

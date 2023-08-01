@@ -11,6 +11,7 @@ import {
   waitForLCP,
   loadBlocks,
   loadCSS,
+  getMetadata,
 } from './lib-franklin.js';
 
 const LCP_BLOCKS = []; // add your LCP blocks to the list
@@ -31,6 +32,30 @@ function buildHeroBlock(main) {
   }
 }
 
+function buildAutoblogBlock(main) {
+  const h1 = main.querySelector('h1');
+  if (h1 && (getMetadata('template') === 'blog')) {
+    const authorcontent = getMetadata('author');
+    const publishedcontent = getMetadata('published');
+    const readcontent = getMetadata('readtime');
+    const section = document.createElement('div');
+    const elems = [authorcontent, publishedcontent, readcontent];
+    const subsection1 = document.createElement('div');
+    elems.forEach((x) => { const col = document.createElement('div'); col.textContent = x; subsection1.appendChild(col); });
+    section.appendChild(subsection1);
+    subsection1.after(h1);
+    // const updatedcontent = getMetadata('updated');
+    // if (updatedcontent) {
+    //   const subsection2 = document.createElement('div');
+    //   subsection2.textContent = 'Updated: ' + `${updatedcontent}`;
+    //   h1.after(subsection2);
+    // }
+    main.prepend(section);
+    section.classList.add('autoblog');
+    section.classList.add('block');
+  }
+}
+
 /**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
@@ -39,6 +64,12 @@ function buildHeroBlock(main) {
 function buildAutoBlocks(main) {
   try {
     buildHeroBlock(main);
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error('Auto Blocking failed', error);
+  }
+  try {
+    buildAutoblogBlock(main);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
