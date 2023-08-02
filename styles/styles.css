@@ -303,6 +303,7 @@ main > .section > .default-content-wrapper > p {
   margin: auto;
   max-width: 60%;
   text-align: left;
+  margin-top: 20px;
 }
 
 .blog main > .section > .default-content-wrapper > p {
@@ -315,4 +316,39 @@ main > .section > .default-content-wrapper > p {
   max-width: 100%;
   width: 750px;
   height: auto;
+}
+
+.blog main .section {
+  padding: 10px 32px 64px;
+}
+
+.blog main .autoblog.block {
+  padding: 64px 32px 10px;
+}
+
+.blog main .autoblog.block > div > div {
+  display: flex;
+  flex-direction: row;
+  width: 750px;
+  height: auto;
+  gap: 20px;
+  font-size: 14px;
+  max-width: 60%;
+  margin: auto;
+  margin-bottom: 2vh;
+  justify-content: left;
+  position: relative;
+  left: 3vw;
+}
+
+.blog main .autoblog.block > div > div > div {
+  font-family: 'GFS Didot', serif;
+  font-style: italic;
+}
+
+
+.blog main .autoblog.block > div > div > div:not(:last-of-type)::after {
+  content: "\2022";
+  position: relative;
+  left: 10px;
 }
