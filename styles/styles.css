@@ -312,13 +312,6 @@ main > .section > .default-content-wrapper > p {
   font-style: italic;
 }
 
-.blog main > .section > .default-content-wrapper > p:first-child:nth-last-child(n+3) {
-  font-family: 'GFS Didot', serif;
-  font-style: italic;
-  font-size: 14px;
-  margin-top: 0;
-}
-
 .blog main > .section > .default-content-wrapper img {
   max-width: 100%;
   width: 750px;
