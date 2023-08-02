@@ -312,7 +312,7 @@ main > .section > .default-content-wrapper > p {
   font-style: italic;
 }
 
-.blog main > .section > .default-content-wrapper > p:first-child:nth-last-child(3) {
+.blog main > .section > .default-content-wrapper > p:first-child:nth-last-child(n+3) {
   font-family: 'GFS Didot', serif;
   font-style: italic;
   font-size: 14px;
