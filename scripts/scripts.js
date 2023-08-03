@@ -65,12 +65,6 @@ function buildAutoblogBlock(main) {
     });
     section.appendChild(subsection1);
     subsection1.after(h1);
-    // const updatedcontent = getMetadata('updated');
-    // if (updatedcontent) {
-    //   const subsection2 = document.createElement('div');
-    //   subsection2.textContent = 'Updated: ' + `${updatedcontent}`;
-    //   h1.after(subsection2);
-    // }
     main.prepend(section);
     section.classList.add('autoblog');
     section.classList.add('block');
@@ -166,3 +160,5 @@ async function loadPage() {
 }
 
 loadPage();
+
+document.querySelectorAll('.blog main > .section > .default-content-wrapper p').forEach((x) => { if (/^Updated/.test(x.textContent)) x.style.fontSize = '14px'; });
