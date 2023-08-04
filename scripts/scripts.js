@@ -162,4 +162,4 @@ async function loadPage() {
 loadPage();
 
 // Identifying the Updated Date text from the blog pages & applying CSS
-document.querySelectorAll('.blog main > .section > .default-content-wrapper p').forEach((x) => { if (/^Updated/.test(x.textContent)) x.classList.add('updateblogdate'); });
+document.querySelectorAll('.blog main > .section > .default-content-wrapper p').forEach((x) => { if (/^Updated:/.test(x.textContent)) x.classList.add('updateblogdate'); });
