@@ -161,4 +161,5 @@ async function loadPage() {
 
 loadPage();
 
-document.querySelectorAll('.blog main > .section > .default-content-wrapper p').forEach((x) => { if (/^Updated/.test(x.textContent)) x.style.fontSize = '14px'; });
+// Identifying the Updated Date text from the blog pages & applying CSS
+document.querySelectorAll('.blog main > .section > .default-content-wrapper p').forEach((x) => { if (/^Updated/.test(x.textContent)) x.classList.add('updateblogdate'); });

@@ -352,3 +352,7 @@ main > .section > .default-content-wrapper > p {
   position: relative;
   left: 10px;
 }
+
+.blog main > .section > .default-content-wrapper > .updateblogdate {
+  font-size: 14px ;
+}
