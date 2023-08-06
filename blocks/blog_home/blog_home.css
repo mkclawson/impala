@@ -1,5 +1,5 @@
-.blog-home main .social-links .button-container {
-    position: flex;
+.blog-home main .social-share.block .social-links > .button-container {
+    display: flex;
     justify-content: space-around;
     gap: 25px;
 }
