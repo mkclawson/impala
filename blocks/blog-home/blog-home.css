@@ -2,4 +2,7 @@
     display: flex;
     justify-content: space-around;
     gap: 25px;
+    position: absolute;
+    left: 10px;
+    width: 30%;
 }
