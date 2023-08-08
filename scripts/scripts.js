@@ -102,7 +102,6 @@ export async function getAllBlogs() {
     const resp = await fetch(`${window.hlx.codeBasePath}/query-index.json`);
     const json = await resp.json();
     json.data.forEach((row) => {
-      console.log(row);
       if (row.image || row.image.startsWith('/default-meta-image.png')) row.image = `/${window.hlx.codeBasePath}${row.image}`;
     });
     window.allBlogs = json.data;
