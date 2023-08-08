@@ -1,10 +1,5 @@
-.blog-home main .social-share.block .social-links > .button-container {
-    display: flex;
-    justify-content: space-around;
-    gap: 25px;
-    position: absolute;
-    left: 10px;
-    width: 30%;
+.blog-home main .social-share.block {
+    display: none;
 }   
 
 .blog-home-container[data-section-status="loaded"] {
