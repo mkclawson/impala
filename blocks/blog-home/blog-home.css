@@ -3,9 +3,7 @@
 }   
 
 .blog-home-container[data-section-status="loaded"] {
-    padding-top: 20px;
-    width: 75%;
-    margin: auto;
+    padding: 20px;
 }
 
 .blog-home[data-block-status="loaded"] {
@@ -31,5 +29,7 @@
 .blog-home[data-block-status="loaded"] > .blog-card {
     position: relative;
     overflow: hidden;
+    width: 75%;
+    margin: auto;
 }
 
