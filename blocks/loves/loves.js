@@ -168,11 +168,17 @@ async function createForm(formURL, lovesURL) {
   // set the variable loveline by parsing the json lovejson
   // for the key "site" with a value of siteurl
   const loveline = lovesjson.data.find((love) => love.site === siteurl);
-  // Write loveline to the console
-  console.log(loveline);
-  // set the variable lovesCount to the value of the key "loves" in the loveline variable
-  // const loves = loveline.loves;
-  const { loves: lovesCount } = loveline;
+  let lovesCount = 0;
+  if (!loveline) {
+    lovesCount = 0;
+  } else {
+    // Write loveline to the console
+    console.log(loveline);
+    // set the variable lovesCount to the value of the key "loves" in the loveline variable
+    // const loves = loveline.loves;
+    const { loves: Count } = loveline;
+    lovesCount = Count;
+  }
   // Write loves to the console
   console.log(lovesCount);
   // create a text div with the id "loves" and the text content of the loves variable
