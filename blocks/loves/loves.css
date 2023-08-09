@@ -1,0 +1,8 @@
+main .form-container {
+  /* background-color: rgb(0,0,0); */
+  padding: var(--spacing-m);
+}
+
+.hidden {
+  display: none;
+}
