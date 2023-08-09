@@ -33,3 +33,18 @@
     margin: auto;
 }
 
+.blog-home[data-block-status="loaded"] > .blog-card img {
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    .blog-home[data-block-status="loaded"] > .blog-card {
+        position: relative;
+        overflow: hidden;
+        width: 75%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
