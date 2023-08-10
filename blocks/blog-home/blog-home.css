@@ -47,6 +47,7 @@
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 30px;
+        height: 50vh;
     }
 
     .blog-home[data-block-status="loaded"] > .blog-card picture {
@@ -55,6 +56,11 @@
 
     .blog-home[data-block-status="loaded"] > .blog-card > .card-content {
         flex-basis: 50%;
+    }
+
+    .blog-home[data-block-status="loaded"] > .blog-card img {
+      object-fit: cover; 
+      height: 100%;
     }
 
 
