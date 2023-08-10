@@ -62,9 +62,9 @@ function createButton(fd) {
         event.preventDefault();
         button.setAttribute('disabled', '');
         await submitForm(form);
-        // update the div lovesdiv to have the text of loves plus 1
-        const lovesdiv = document.getElementById('loves');
-        lovesdiv.textContent = parseInt(lovesdiv.textContent, 10) + 1;
+        // update the div loveslabel to have the text of loves plus 1
+        const loveslabel = document.getElementById('loves');
+        loveslabel.textContent = parseInt(loveslabel.textContent, 10) + 1;
         const redirectTo = fd.Extra;
         // If redirectTo is not blank
         if (redirectTo) {
@@ -166,9 +166,9 @@ async function createForm(formURL, lovesURL) {
   // Write loves to the console
   // console.log(lovesCount);
   // create a text div with the id "loves" and the text content of the loves variable
-  const lovesdiv = document.createElement('label');
-  lovesdiv.id = 'loves';
-  lovesdiv.textContent = lovesCount;
+  const loveslabel = document.createElement('label');
+  loveslabel.id = 'loves';
+  loveslabel.textContent = lovesCount;
   json.data.forEach((fd) => {
     fd.Type = fd.Type || 'text';
     const fieldWrapper = document.createElement('div');
@@ -182,7 +182,7 @@ async function createForm(formURL, lovesURL) {
         fieldWrapper.append(createSelect(fd));
         break;
       case 'submit':
-        fieldWrapper.append(lovesdiv);
+        fieldWrapper.append(loveslabel);
         fieldWrapper.append(createButton(fd));
         break;
       default:
