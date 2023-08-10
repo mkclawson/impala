@@ -61,8 +61,6 @@
         text-align: left;
     }
 
-    .blog-home[data-block-status="loaded"] > .blog-card > .card-content >
-
     .blog-home[data-block-status="loaded"] > .blog-card img {
       object-fit: cover; 
       height: 100%;
