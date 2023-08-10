@@ -51,11 +51,11 @@
     }
 
     .blog-home[data-block-status="loaded"] > .blog-card picture {
-        flex-basis: 60%;
+        flex-basis: 55%;
     }
 
     .blog-home[data-block-status="loaded"] > .blog-card > .card-content {
-        flex-basis: 40%;
+        flex-basis: 45%;
     }
 
     .blog-home[data-block-status="loaded"] > .blog-card img {
