@@ -47,15 +47,15 @@
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 30px;
-        height: 45vh;
+        height: 40vh;
     }
 
     .blog-home[data-block-status="loaded"] > .blog-card picture {
-        flex-basis: 50%;
+        flex-basis: 60%;
     }
 
     .blog-home[data-block-status="loaded"] > .blog-card > .card-content {
-        flex-basis: 50%;
+        flex-basis: 40%;
     }
 
     .blog-home[data-block-status="loaded"] > .blog-card img {
