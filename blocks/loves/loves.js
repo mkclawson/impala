@@ -182,7 +182,7 @@ async function createForm(formURL, lovesURL) {
   // Write loves to the console
   console.log(lovesCount);
   // create a text div with the id "loves" and the text content of the loves variable
-  const lovesdiv = document.createElement('div');
+  const lovesdiv = document.createElement('label');
   lovesdiv.id = 'loves';
   lovesdiv.textContent = lovesCount;
   json.data.forEach((fd) => {
