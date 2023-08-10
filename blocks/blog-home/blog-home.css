@@ -8,9 +8,7 @@
 
 .blog-home[data-block-status="loaded"] {
     position: relative;
-    display: flex;
     flex-direction: column;
-    align-items: flex-start;
     padding-top: 48px;
     gap: 48px;
 
@@ -31,6 +29,8 @@
     overflow: hidden;
     width: 75%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .blog-home[data-block-status="loaded"] > .blog-card img {
@@ -41,10 +41,21 @@
     .blog-home[data-block-status="loaded"] > .blog-card {
         position: relative;
         overflow: hidden;
-        width: 75%;
+        width: 80%;
         margin: auto;
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
     }
+
+    .blog-home[data-block-status="loaded"] > .blog-card picture {
+        flex-basis: 50%;
+    }
+
+    .blog-home[data-block-status="loaded"] > .blog-card > .card-content {
+        flex-basis: 50%;
+    }
+
+
 }
 
