@@ -37,6 +37,17 @@
     width: 100%;
 }
 
+.blog-home[data-block-status="loaded"] > .blog-card > .card-content > .blog-publishnread {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.blog-home[data-block-status="loaded"] > .blog-card > .card-content > .blog-publishnread > div:not(:last-of-type)::after {
+    content: "";
+  }
+
+
 @media (min-width: 600px) {
     .blog-home[data-block-status="loaded"] > .blog-card {
         position: relative;
@@ -67,6 +78,15 @@
       width: 100%;
     }
 
+    .blog-home[data-block-status="loaded"] > .blog-card > .card-content > .blog-publishnread {
+        flex-direction: row;
+    }
+
+    .blog-home[data-block-status="loaded"] > .blog-card > .card-content > .blog-publishnread > div:not(:last-of-type)::after {
+        content: "\2022";
+        position: relative;
+        left: 10px;
+      }
 
 }
 

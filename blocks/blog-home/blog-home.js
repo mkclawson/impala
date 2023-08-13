@@ -11,9 +11,13 @@ function createCard(row, style) {
   author.classList.add('blog-author');
   if (row.author && row.author !== '0') author.innerHTML += `${row.author}`;
   const publishnread = document.createElement('div');
-  author.classList.add('blog-publishnread');
-  if (row.published && row.published !== '0') publishnread.innerHTML += `${row.published}`;
-  if (row.readtime && row.readtime !== '0') publishnread.innerHTML += ` ${row.readtime}`;
+  publishnread.classList.add('blog-publishnread');
+  const publishdiv = document.createElement('div');
+  const readtimediv = document.createElement('div');
+  if (row.published && row.published !== '0') publishdiv.innerHTML += `${row.published}`;
+  if (row.readtime && row.readtime !== '0') readtimediv.innerHTML += ` ${row.readtime}`;
+  publishnread.append(publishdiv);
+  publishnread.append(readtimediv);
   cardContent.append(author);
   cardContent.append(publishnread);
   const link = document.createElement('a');
