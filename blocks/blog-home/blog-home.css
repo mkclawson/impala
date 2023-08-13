@@ -47,6 +47,16 @@
     content: "";
   }
 
+  .blog-home[data-block-status="loaded"] > .blog-card > .card-content > .blog-link h5 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+  }
+
+  .blog-home[data-block-status="loaded"] > .blog-card > .card-content p {
+    font-size: 16px;
+    font-family: 'GFS Didot', serif;
+    font-style: italic;
+  }
 
 @media (min-width: 600px) {
     .blog-home[data-block-status="loaded"] > .blog-card {
