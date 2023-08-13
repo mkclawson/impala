@@ -53,12 +53,19 @@
   .blog-home[data-block-status="loaded"] > .blog-card > .card-content > .blog-link h5 {
     font-family: 'Playfair Display', serif;
     font-size: 28px;
+    color: var(--text-color);
   }
 
-  .blog-home[data-block-status="loaded"] > .blog-card > .card-content p {
-    font-size: 16px;
-    font-family: 'GFS Didot', serif;
-    font-style: italic;
+  .blog-home[data-block-status="loaded"] > .blog-card > .card-content > .blog-link h5:hover {
+    color: #705959;
+  }
+
+  .blog-home[data-block-status="loaded"] > .blog-card > .card-content a:hover {
+    text-decoration: none;
+  }
+
+  .blog-home[data-block-status="loaded"] > .blog-card > .card-content p:hover {
+    color: #705959;
   }
 
   .blog-home[data-block-status="loaded"] > .blog-card > .card-content > .blog-author {
