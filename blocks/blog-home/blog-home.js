@@ -32,7 +32,9 @@ export default async function decorate(block) {
   // Make a call to get all blog details from the blog index
   const blogList = await getAllBlogs();
   if (blogList.length) {
-    blogList.forEach((row) => {
+    // eslint-disable-next-line
+    const sortBl = blogList.sort((objA, objB) => Number(new Date(objB.published)) - Number(new Date(objA.published)));
+    sortBl.forEach((row) => {
       if (/^\/blog\/[\d\w]/.test(row.path)) {
         block.append(createCard(row, 'blog-card'));
       }
