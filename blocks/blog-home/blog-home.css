@@ -41,6 +41,9 @@
     display: flex;
     gap: 20px;
     flex-direction: column;
+    font-family: 'GFS Didot', serif;
+    font-style: italic;
+    font-size: 12px;
 }
 
 .blog-home[data-block-status="loaded"] > .blog-card > .card-content > .blog-publishnread > div:not(:last-of-type)::after {
@@ -57,6 +60,13 @@
     font-family: 'GFS Didot', serif;
     font-style: italic;
   }
+
+  .blog-home[data-block-status="loaded"] > .blog-card > .card-content > .blog-author {
+    font-family: 'GFS Didot', serif;
+    font-style: italic;
+    font-size: 12px;
+  }
+
 
 @media (min-width: 600px) {
     .blog-home[data-block-status="loaded"] > .blog-card {
