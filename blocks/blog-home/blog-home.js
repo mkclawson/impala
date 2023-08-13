@@ -4,7 +4,6 @@ import { createOptimizedPicture } from '../../scripts/lib-franklin.js';
 function createCard(row, style) {
   const card = document.createElement('div');
   if (style) card.classList.add(style);
-  console.log(row.title);
   if (row.image && row.title) card.prepend(createOptimizedPicture(row.image));
   const cardContent = document.createElement('div');
   cardContent.classList.add('card-content');
