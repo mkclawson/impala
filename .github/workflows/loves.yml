@@ -1,0 +1,16 @@
+name: preview and publish loves once an hour
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron:  '0 * * * *'
+
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Loves Preview
+      run: curl --request POST https://admin.hlx.page/preview/mkclawson/impala/main/love.json 
+    - name: Loves Publish
+      run: curl --request POST https://admin.hlx.page/live/mkclawson/impala/main/love.json

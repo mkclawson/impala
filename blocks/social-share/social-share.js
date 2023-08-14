@@ -92,6 +92,7 @@ export function socialShareBlock(title, socials) {
 export default function decorate(block) {
   const template = getMetadata('template')
     .toLowerCase();
+  console.log(template);
 
   let title = '';
   if (block.querySelector('.social-share p')) {
@@ -104,7 +105,7 @@ export default function decorate(block) {
 
   block.innerHTML = '';
   // block.appendChild(socialShareBlock(title, socials));
-  block.appendChild(socialShareBlock(title, socials));
+  if (template !== 'blog-home') block.appendChild(socialShareBlock(title, socials));
 
   decorateIcons(block);
 }
