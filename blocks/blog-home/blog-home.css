@@ -56,6 +56,12 @@
     color: var(--text-color);
   }
 
+  .blog-home[data-block-status="loaded"] > .blog-card > .card-content p {
+    font-size: 18px;
+    font-family: 'GFS Didot', serif;
+    font-style: italic;
+  }
+
   .blog-home[data-block-status="loaded"] > .blog-card > .card-content:hover h5 {
     color: #705959;
   }
