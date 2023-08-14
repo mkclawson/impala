@@ -1,0 +1,38 @@
+main .form-container {
+  padding: var(--spacing-m);
+}
+
+.hidden {
+  display: none;
+}
+
+.button {
+  cursor: pointer;
+  background: rgb(255 255 255 / 80%);
+  color: rgb(233 15 15);
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 6px 10px;
+  border: none;
+}
+
+.loves {
+  font-size: 1.2rem;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.button:hover {
+  --link-hover-color: rgb(255 255 255);
+}
+
+.button:disabled {
+  background: rgb(255 255 255);
+  
+   --overlay-background-color: rgb(255 255 255);
+}
+
+.button-container {
+  float: right;
+}
