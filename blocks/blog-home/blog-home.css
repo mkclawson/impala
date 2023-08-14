@@ -56,15 +56,15 @@
     color: var(--text-color);
   }
 
-  .blog-home[data-block-status="loaded"] > .blog-card > .card-content > .blog-link h5:hover {
+  .blog-home[data-block-status="loaded"] > .blog-card > .card-content:hover h5 {
     color: #705959;
   }
 
-  .blog-home[data-block-status="loaded"] > .blog-card > .card-content a:hover {
+  .blog-home[data-block-status="loaded"] > .blog-card > .card-content:hover a {
     text-decoration: none;
   }
 
-  .blog-home[data-block-status="loaded"] > .blog-card > .card-content p:hover {
+  .blog-home[data-block-status="loaded"] > .blog-card > .card-content:hover p {
     color: #705959;
   }
 
