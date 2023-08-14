@@ -25,7 +25,7 @@ function createCard(row, style) {
   link.href = row.path;
   if (row.title) link.innerHTML = `<h5>${row.title}</h5>`;
   cardContent.append(link);
-  if (row.description) cardContent.innerHTML += `<p>${row.description}</p>`;
+  if (row.description) link.innerHTML += `<p>${row.description}</p>`;
   card.append(cardContent);
   return (card);
 }
