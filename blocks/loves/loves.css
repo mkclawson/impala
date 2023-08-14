@@ -8,8 +8,7 @@ main .form-container {
 
 .button {
   cursor: pointer;
-  background: rgb(255 255 255);
-  opacity: 0.8;
+  background: rgb(255 255 255 / 80%);
   color: rgb(233 15 15);
   border-radius: 16px;
   font-size: 1rem;
@@ -30,7 +29,8 @@ main .form-container {
 
 .button:disabled {
   background: rgb(255 255 255);
-  --overlay-background-color: rgb(255 255 255);
+  
+   --overlay-background-color: rgb(255 255 255);
 }
 
 .button-container {
