@@ -1,12 +1,8 @@
-main .form-container {
-  padding: var(--spacing-m);
-}
-
-.hidden {
+.loves .hidden {
   display: none;
 }
 
-.button {
+.loves .button {
   cursor: pointer;
   background: rgb(255 255 255 / 80%);
   color: rgb(233 15 15);
@@ -23,16 +19,16 @@ main .form-container {
   font-style: italic;
 }
 
-.button:hover {
+.loves .button:hover {
   --link-hover-color: rgb(255 255 255);
 }
 
-.button:disabled {
+.loves .button:disabled {
   background: rgb(255 255 255);
-  
+
    --overlay-background-color: rgb(255 255 255);
 }
 
-.button-container {
+.loves .button-container {
   float: right;
 }
