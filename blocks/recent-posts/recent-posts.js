@@ -34,13 +34,11 @@ export default async function decorate(block) {
   block.textContent = '';
   // Make a call to get all blog details from the blog index
   const blogList = await getAllBlogs();
-  const titleContent = getMetadata('title');
-  console.log(titleContent);
+  const titleContent = getMetadata('og:title');
   if (blogList.length) {
     // eslint-disable-next-line
     const sortBl = blogList.sort((objA, objB) => Number(new Date(objB.published)) - Number(new Date(objA.published)));
     sortBl.forEach((row) => {
-      console.log(row.title);
       if (/^\/blog\/[\d\w]/.test(row.path) && titleContent !== row.title) {
         block.append(createCard(row, 'blog-card'));
       }
