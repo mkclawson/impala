@@ -118,8 +118,9 @@ function applyRules(form, rules) {
   });
 }
 
-async function createForm(formURL, lovesURL) {
-  const { pathname } = new URL(formURL);
+async function createForm() {
+  // const { pathname } = new URL(formURL);
+  const pathname = '/like-form.json';
   // Write the pathname to the console
   // console.log(pathname);
   const resp = await fetch(pathname);
@@ -134,11 +135,13 @@ async function createForm(formURL, lovesURL) {
   form.dataset.action = pathname.split('.json')[0];
   // Write form.dataset.action to the console
   // console.log(form.dataset.action);
-  const lovespathname = new URL(lovesURL);
+  // const lovespathnameurl = new URL(lovesURL);
   // Write the lovespathname to the console
-  // console.log(lovespathname.pathname);
+  // console.log(lovespathnameurl.pathname);
   // console.log(lovesURL);
-  const lovesresp = await fetch(lovespathname.pathname);
+  // const lovespathname = lovespathnameurl.pathname;
+  const lovespathname = '/love.json';
+  const lovesresp = await fetch(lovespathname);
   // Write lovesresp to the console
   // console.log(lovesresp);
   // Get the json from the lovesresp
@@ -208,14 +211,10 @@ async function createForm(formURL, lovesURL) {
 }
 
 export default async function decorate(block) {
-  const form = block.querySelector('a[href$=".json"]');
-  // Write form to the console
-  // console.log(form.href);
-  const loves = block.querySelectorAll('a[href$=".json"]')[1];
-  // write loves to the console
-  // console.log(loves.href);
-  if (form && loves) {
-    form.replaceWith(await createForm(form.href, loves.href));
-    loves.remove();
-  }
+  // const lovesdiv = document.getElementsByClassName('loves block');
+  // lovesdiv.id = 'lovesdivid';
+  const container = document.createElement('div');
+  container.classList.add('container');
+  block.appendChild(container);
+  container.replaceWith(await createForm());
 }
