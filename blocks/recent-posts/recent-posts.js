@@ -18,6 +18,7 @@ function createCard(row, style) {
 
 export default async function decorate(block) {
   block.textContent = '';
+  let counter = 0;
   // Make a call to get all blog details from the blog index
   const blogList = await getAllBlogs();
   const titleContent = getMetadata('og:title');
@@ -26,7 +27,7 @@ export default async function decorate(block) {
     const sortBl = blogList.sort((objA, objB) => Number(new Date(objB.published)) - Number(new Date(objA.published)));
     sortBl.forEach((row) => {
       if (/^\/blog\/[\d\w]/.test(row.path) && titleContent !== row.title) {
-        block.append(createCard(row, 'blog-card'));
+        if (counter < 3) { block.append(createCard(row, 'blog-card')); counter += 1; }
       }
     });
   } else {

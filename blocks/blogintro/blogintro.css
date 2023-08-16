@@ -1,0 +1,26 @@
+.block.blogintro > div {
+    width: 750px;
+    height: auto;
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+    max-width: 60%;
+    margin: auto;
+}
+
+.block.blogintro > div > div {
+    font-size: 14px;
+    font-family: 'GFS Didot', serif;
+    font-style: italic;
+}
+
+.block.blogintro > div:first-child {
+margin-bottom: 2vh;
+margin-left: 15vw;
+}
+
+.block.blogintro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-style: normal;
+}
