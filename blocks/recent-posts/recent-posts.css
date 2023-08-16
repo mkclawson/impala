@@ -1,0 +1,17 @@
+.blog main .block.recent-posts[data-block-status="loaded"] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media (min-width: 600px) {
+    .blog main .block.recent-posts[data-block-status="loaded"] {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 30px;
+        width: 95%;
+    }
+}
