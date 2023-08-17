@@ -67,7 +67,6 @@ function buildAutoblogBlock(main) {
     subsection1.after(h1);
     main.prepend(section);
     section.classList.add('autoblog');
-    section.classList.add('block');
   }
 }
 
