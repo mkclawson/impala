@@ -71,11 +71,11 @@
     justify-content: space-between;
     font-size: 18px;
     font-family: 'GFS Didot', serif;
-    font-style: italic;
  }
 
  .blog main .columns.block > div > div:first-child {
     text-align: left;
+    font-style: italic
  }
 
  .blog main .columns.block > div > div:last-child {
