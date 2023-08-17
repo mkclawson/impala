@@ -19,6 +19,7 @@ function createCard(row, style) {
 export default async function decorate(block) {
   block.textContent = '';
   let counter = 0;
+  let secondCard = 0;
   // Make a call to get all blog details from the blog index
   const blogList = await getAllBlogs();
   const titleContent = getMetadata('og:title');
@@ -27,7 +28,21 @@ export default async function decorate(block) {
     const sortBl = blogList.sort((objA, objB) => Number(new Date(objB.published)) - Number(new Date(objA.published)));
     sortBl.forEach((row) => {
       if (/^\/blog\/[\d\w]/.test(row.path) && titleContent !== row.title) {
-        if (counter < 3) { block.append(createCard(row, 'blog-card')); counter += 1; }
+        if (counter === 0) {
+          const firstCard = document.createElement('div');
+          const recentPostsCard = document.createElement('div');
+          recentPostsCard.innerHTML = 'Recent Posts';
+          const seeAllCard = document.createElement('a');
+          seeAllCard.href = '/blog/';
+          seeAllCard.innerHTML = 'See All';
+          firstCard.appendChild(recentPostsCard);
+          firstCard.appendChild(seeAllCard);
+          block.append(firstCard);
+          secondCard = document.createElement('div');
+          secondCard.classList.add('blog-cards-parent');
+          block.append(secondCard);
+        }
+        if (counter < 3) { secondCard.append(createCard(row, 'blog-card')); counter += 1; }
       }
     });
   } else {

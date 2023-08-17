@@ -14,6 +14,15 @@
     color: #705959;
   }
 
+  .blog main .recent-posts.block > div > a {
+    color: var(--text-color);
+  }
+
+  .blog main .recent-posts.block > div > a:hover {
+    color: #705959;
+    text-decoration: none;
+ }
+
   .blog main .block.recent-posts[data-block-status="loaded"] .blog-card > .card-content:hover a {
     text-decoration: none;
   }
@@ -24,7 +33,7 @@
       width: 100%;
  }
 
- .blog main .columns > div {
+ .blog main .recent-posts.block > div {
     display: flex;
     flex-direction: column;
     font-size: 18px;
@@ -32,23 +41,10 @@
     font-style: italic;
  }
 
- .blog main .columns.block > div > div:first-child:hover {
+ .blog main .recent-posts.block > div > div:hover {
     color: #705959;
  }
 
- .blog main .columns.block > div a.button:any-link, button {
-    font-size: 18px;
-    font-family: 'GFS Didot', serif;
-    font-style: italic;
-    color: var(--text-color);
-    background-color: white;
-    font-weight: 0;
-    border: 0;
- }
-
- .blog main .columns.block > div a.button:any-link:hover {
-    color: #705959;
- }
 
 
 @media (min-width: 600px) {
@@ -59,12 +55,18 @@
     .blog main .block.recent-posts[data-block-status="loaded"] {
         position: relative;
         display: flex;
+        flex-direction: column;
+    }
+
+ .blog main .block.recent-posts[data-block-status="loaded"] .blog-cards-parent {
+        position: relative;
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
         gap: 30px;
         width: 95%;
         margin: auto;
-    }
+ }
 
  .blog main .block.recent-posts[data-block-status="loaded"] .blog-card {
     flex: 1 1 0;
@@ -79,23 +81,13 @@
     padding: 32px 32px 10px;
  }
 
- .blog main .columns.block > div {
+ .blog main .recent-posts.block > div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     font-size: 18px;
     font-family: 'GFS Didot', serif;
     align-items: center;
- }
-
- .blog main .columns.block > div > div:first-child {
-    text-align: left;
     font-style: italic
  }
-
- .blog main .columns.block > div > div:last-child {
-    text-align: right;
- }
-
-
 }
