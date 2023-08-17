@@ -24,10 +24,22 @@
       width: 100%;
  }
 
+ .blog main .columns div {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-family: 'GFS Didot', serif;
+    font-style: italic;
+ }
+
+ .blog main .section.columns-container:hover {
+    color: #705959;
+ }
+
 
 @media (min-width: 600px) {
     .blog main .section.recent-posts-container {
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
 
     .blog main .block.recent-posts[data-block-status="loaded"] {
@@ -44,6 +56,19 @@
     flex: 1 1 0;
     width: 100%;
     height: 25vh;
+ }
+
+ .blog main .section.columns-container {
+    padding: 32px 32px 10px;
+ }
+
+ .blog main .columns div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 18px;
+    font-family: 'GFS Didot', serif;
+    font-style: italic;
  }
 
 }
