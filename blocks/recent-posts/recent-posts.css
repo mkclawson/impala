@@ -4,13 +4,13 @@
     flex-direction: column;
 }
 
-.blog main .block.recent-posts[data-block-status="loaded"] .blog-card > .card-content > .blog-link h5 {
+.blog main .block.recent-posts[data-block-status="loaded"] .blog-card > .card-content > .blog-link h3 {
     font-family: 'Playfair Display', serif;
     font-size: 18px;
     color: var(--text-color);
   }
 
-  .blog main .block.recent-posts[data-block-status="loaded"] .blog-card > .card-content:hover > .blog-link h5 {
+  .blog main .block.recent-posts[data-block-status="loaded"] .blog-card > .card-content:hover > .blog-link h3 {
     color: #705959;
   }
 
@@ -39,6 +39,7 @@
     font-size: 18px;
     font-family: 'GFS Didot', serif;
     font-style: italic;
+    margin-bottom: 20px;
  }
 
  .blog main .recent-posts.block > div > div:hover {

@@ -10,7 +10,7 @@ function createCard(row, style) {
   const link = document.createElement('a');
   link.classList.add('blog-link');
   link.href = row.path;
-  if (row.title) link.innerHTML = `<h5>${row.title}</h5>`;
+  if (row.title) link.innerHTML = `<h3>${row.title}</h3>`;
   cardContent.append(link);
   card.append(cardContent);
   return (card);
