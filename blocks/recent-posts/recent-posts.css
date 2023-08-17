@@ -24,7 +24,7 @@
       width: 100%;
  }
 
- .blog main .columns div {
+ .blog main .columns > div {
     display: flex;
     flex-direction: column;
     font-size: 18px;
@@ -62,7 +62,7 @@
     padding: 32px 32px 10px;
  }
 
- .blog main .columns div {
+ .blog main .columns.block > div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
