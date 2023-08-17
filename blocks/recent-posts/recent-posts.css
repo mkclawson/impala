@@ -32,10 +32,13 @@
     font-style: italic;
  }
 
- .blog main .section.columns-container:hover {
+ .blog main .columns.block > div > div:first-child:hover {
     color: #705959;
  }
 
+ .blog main .columns.block > div > div:last-child:hover {
+    color: #705959;
+ }
 
 @media (min-width: 600px) {
     .blog main .section.recent-posts-container {
@@ -70,5 +73,14 @@
     font-family: 'GFS Didot', serif;
     font-style: italic;
  }
+
+ .blog main .columns.block > div > div:first-child {
+    text-align: left;
+ }
+
+ .blog main .columns.block > div > div:last-child {
+    text-align: right;
+ }
+
 
 }
