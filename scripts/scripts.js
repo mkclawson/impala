@@ -79,6 +79,11 @@ function buildAutoblogBlock(main) {
 function buildAutoBlocks(main) {
   const container = document.querySelector('main div');
   container.append(buildBlock('social-share', '<p>Share this blog post</p>'));
+  const h1 = main.querySelector('h1');
+  if (h1 && (getMetadata('template') === 'blog')) {
+    const lovescontainer = document.querySelector('main div');
+    lovescontainer.append(buildBlock('loves', ''));
+  }
   try {
     buildHeroBlock(main);
   } catch (error) {
