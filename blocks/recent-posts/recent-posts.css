@@ -36,9 +36,20 @@
     color: #705959;
  }
 
- .blog main .columns.block > div > div:last-child:hover {
+ .blog main .columns.block > div a.button:any-link, button {
+    font-size: 18px;
+    font-family: 'GFS Didot', serif;
+    font-style: italic;
+    color: var(--text-color);
+    background-color: white;
+    font-weight: 0;
+    border: 0;
+ }
+
+ .blog main .columns.block > div a.button:any-link:hover {
     color: #705959;
  }
+
 
 @media (min-width: 600px) {
     .blog main .section.recent-posts-container {
@@ -71,6 +82,7 @@
     justify-content: space-between;
     font-size: 18px;
     font-family: 'GFS Didot', serif;
+    align-items: center;
  }
 
  .blog main .columns.block > div > div:first-child {
