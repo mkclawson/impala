@@ -338,7 +338,7 @@ main > .section > .default-content-wrapper > p {
   margin-bottom: 2vh;
   justify-content: left;
   position: relative;
-  left: 3vw;
+  left: 20px;
 }
 
 .blog main .autoblog > div > div > div {
