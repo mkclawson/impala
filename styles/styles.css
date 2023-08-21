@@ -322,11 +322,11 @@ main > .section > .default-content-wrapper > p {
   padding: 10px 32px 64px;
 }
 
-.blog main .autoblog.block {
+.blog main .autoblog {
   padding: 64px 32px 10px;
 }
 
-.blog main .autoblog.block > div > div {
+.blog main .autoblog > div > div {
   display: flex;
   flex-direction: row;
   width: 750px;
@@ -335,19 +335,18 @@ main > .section > .default-content-wrapper > p {
   font-size: 14px;
   max-width: 60%;
   margin: auto;
-  margin-bottom: 2vh;
   justify-content: left;
   position: relative;
-  left: 3vw;
+  left: 20px;
 }
 
-.blog main .autoblog.block > div > div > div {
+.blog main .autoblog > div > div > div {
   font-family: 'GFS Didot', serif;
   font-style: italic;
 }
 
 
-.blog main .autoblog.block > div > div > div:not(:last-of-type)::after {
+.blog main .autoblog > div > div > div:not(:last-of-type)::after {
   content: "\2022";
   position: relative;
   left: 10px;

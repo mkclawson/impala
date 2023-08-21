@@ -1,0 +1,94 @@
+.blog main .block.recent-posts[data-block-status="loaded"] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog main .block.recent-posts[data-block-status="loaded"] .blog-card > .card-content > .blog-link h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--text-color);
+  }
+
+  .blog main .block.recent-posts[data-block-status="loaded"] .blog-card > .card-content:hover > .blog-link h3 {
+    color: #705959;
+  }
+
+  .blog main .recent-posts.block > div > a {
+    color: var(--text-color);
+  }
+
+  .blog main .recent-posts.block > div > a:hover {
+    color: #705959;
+    text-decoration: none;
+ }
+
+  .blog main .block.recent-posts[data-block-status="loaded"] .blog-card > .card-content:hover a {
+    text-decoration: none;
+  }
+
+  .blog main .block.recent-posts[data-block-status="loaded"] .blog-card img {
+    object-fit: cover; 
+      height: 100%;
+      width: 100%;
+ }
+
+ .blog main .recent-posts.block > div {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-family: 'GFS Didot', serif;
+    font-style: italic;
+    margin-bottom: 20px;
+ }
+
+ .blog main .recent-posts.block > div > div:hover {
+    color: #705959;
+ }
+
+
+
+@media (min-width: 600px) {
+    .blog main .section.recent-posts-container {
+        margin-bottom: 40px;
+    }
+
+    .blog main .block.recent-posts[data-block-status="loaded"] {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+ .blog main .block.recent-posts[data-block-status="loaded"] .blog-cards-parent {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 30px;
+        width: 95%;
+        margin: auto;
+ }
+
+ .blog main .block.recent-posts[data-block-status="loaded"] .blog-card {
+    flex: 1 1 0;
+    width: 100%;
+ }
+
+ .blog main .block.recent-posts[data-block-status="loaded"] .blog-card img {
+    aspect-ratio: 16/9;
+ }
+
+ .blog main .section.columns-container {
+    padding: 32px 32px 10px;
+ }
+
+ .blog main .recent-posts.block > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 18px;
+    font-family: 'GFS Didot', serif;
+    align-items: center;
+    font-style: italic
+ }
+}
