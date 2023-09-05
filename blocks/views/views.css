@@ -1,41 +1,39 @@
-.loves .hidden {
+.views .hidden {
   display: none;
 }
 
-.loves .button {
+.views .button {
   cursor: pointer;
   background: rgb(255 255 255 / 80%);
-  color: rgb(233 15 15);
+  color: rgb(0 0 0);
   border-radius: 16px;
-  font-size: 1rem;
-  font-weight: 300;
+  font-size: 1.0rem;
+  font-weight: 50;
+  font-style: italic;
   padding: 6px 10px;
   border: none;
 }
 
-.loves {
+.views {
   font-size: 1.0rem;
-  font-weight: 100;
+  font-weight: 50;
   font-style: italic;
-  text-align: right;
+  text-align: left;
   display: inline;
 }
 
-.loves-wrapper {
+.views-wrapper {
   display: inline-block;
-  padding-left: clamp(0px, 25%, 310px);
+  padding-right: clamp(0px, 20%, 310px);
 }
 
-.loves .button:hover {
+.views .button:hover {
   --link-hover-color: rgb(255 255 255);
 }
 
-.loves .button:disabled {
+.views .button:disabled {
   background: rgb(255 255 255);
   
    --overlay-background-color: rgb(255 255 255);
 }
 
-.loves .button-container {
-  float: right;
-}

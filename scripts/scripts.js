@@ -80,8 +80,8 @@ function buildAutoBlocks(main) {
   container.append(buildBlock('social-share', '<p>Share this blog post</p>'));
   const h1 = main.querySelector('h1');
   if (h1 && (getMetadata('template') === 'blog')) {
-    const lovescontainer = document.querySelector('main div');
-    lovescontainer.append(buildBlock('loves', ''));
+    container.append(buildBlock('views', ''));
+    container.append(buildBlock('loves', ''));
   }
   try {
     buildHeroBlock(main);
