@@ -105,7 +105,26 @@ export default function decorate(block) {
 
   block.innerHTML = '';
   // block.appendChild(socialShareBlock(title, socials));
-  if (template !== 'blog-home') block.appendChild(socialShareBlock(title, socials));
+  if (template !== 'blog-home') {
+    block.appendChild(socialShareBlock(title, socials));
+
+    // disgus commenting configuration
+    var disqus_config = function () {
+      this.page.url = window.location.href;
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-main-impala-mkclawson-hlx-live.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+
+    // insert disqus thread
+    const loves = document.querySelector('.loves-wrapper');
+    const disqus = div({ id: 'disqus_thread' });
+    if (loves) loves.insertAdjacentElement('afterend', disqus);
+    else block.appendChild(disqus);
+  }
 
   decorateIcons(block);
 }
