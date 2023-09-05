@@ -32,6 +32,7 @@
 
 .loves .button:disabled {
   background: rgb(255 255 255);
+  
    --overlay-background-color: rgb(255 255 255);
 }
 
