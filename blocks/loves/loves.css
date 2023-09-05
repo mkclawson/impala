@@ -14,7 +14,7 @@
 }
 
 .loves {
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   font-weight: 100;
   font-style: italic;
   text-align: right;
@@ -32,7 +32,6 @@
 
 .loves .button:disabled {
   background: rgb(255 255 255);
-
    --overlay-background-color: rgb(255 255 255);
 }
 
