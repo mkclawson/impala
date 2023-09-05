@@ -7,15 +7,16 @@
   background: rgb(255 255 255 / 80%);
   color: rgb(0 0 0);
   border-radius: 16px;
-  font-size: 1.2rem;
-  font-weight: 300;
+  font-size: 1.0rem;
+  font-weight: 50;
+  font-style: italic;
   padding: 6px 10px;
   border: none;
 }
 
 .views {
-  font-size: 1.2rem;
-  font-weight: 100;
+  font-size: 1.0rem;
+  font-weight: 50;
   font-style: italic;
   text-align: left;
   display: inline;
@@ -23,7 +24,7 @@
 
 .views-wrapper {
   display: inline-block;
-  padding-right: clamp(0px, 25%, 310px);
+  padding-right: clamp(0px, 20%, 310px);
 }
 
 .views .button:hover {
@@ -32,7 +33,6 @@
 
 .views .button:disabled {
   background: rgb(255 255 255);
-
    --overlay-background-color: rgb(255 255 255);
 }
 
