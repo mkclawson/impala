@@ -355,3 +355,9 @@ main > .section > .default-content-wrapper > p {
 .blog main > .section > .default-content-wrapper > .updateblogdate {
   font-size: 14px ;
 }
+
+/* discuss commenting */
+/* stylelint-disable-next-line selector-id-pattern */
+#disqus_thread  {
+  margin-top: 50px;
+}
