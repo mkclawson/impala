@@ -14,3 +14,7 @@ jobs:
       run: curl --request POST https://admin.hlx.page/preview/mkclawson/impala/main/love.json 
     - name: Loves Publish
       run: curl --request POST https://admin.hlx.page/live/mkclawson/impala/main/love.json
+    - name: Views Preview
+      run: curl --request POST https://admin.hlx.page/preview/mkclawson/impala/main/views.json
+    - name: Views Publish
+      run: curl --request POST https://admin.hlx.page/live/mkclawson/impala/main/views.json
