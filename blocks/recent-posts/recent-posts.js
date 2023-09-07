@@ -7,11 +7,7 @@ function createCard(row, style) {
   if (row.image && row.title) card.prepend(createOptimizedPicture(row.image));
   const cardContent = document.createElement('div');
   cardContent.classList.add('card-content');
-  const link = document.createElement('a');
-  link.classList.add('blog-link');
-  link.href = row.path;
-  if (row.title) link.innerHTML = `<h3>${row.title}</h3>`;
-  cardContent.append(link);
+  cardContent.innerHTML = `<h3><a href="${row.path}">${row.title}</a></h3> <div><a href="${row.path}#disqus_thread" class="count"></a></div>`;
   card.append(cardContent);
   return (card);
 }

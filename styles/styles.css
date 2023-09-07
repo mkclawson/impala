@@ -357,30 +357,20 @@ main > .section > .default-content-wrapper > p {
 }
 
 /* discuss commenting */
-details.disqus {
-  position: relative;
-  cursor: pointer;
-  text-align: left;
-  margin: 80px 0 0;
-}
-
-details.disqus summary {
-  max-width: 60%;
-  margin: auto;
-  padding: 10px 0;
-  border-bottom: 1px solid #ccc; 
-  font-size: .9em;
-}
-
-details.disqus summary:hover {
-  border-bottom: 1px solid #666;
-}
-
 /* stylelint-disable-next-line selector-id-pattern */
 #disqus_thread  {
   max-width: 60%;
   margin: auto;
   padding-top: 30px;
-  border-bottom: 1px solid #ccc; 
-  font-size: .9em;
+}
+
+@media (max-width: 600px) {
+  details.disqus summary {
+    max-width: 100%;
+  }
+
+  /* stylelint-disable-next-line selector-id-pattern */
+  #disqus_thread  {
+    max-width: 100%;
+  }
 }

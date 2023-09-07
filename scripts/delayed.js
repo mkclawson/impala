@@ -7,10 +7,10 @@ sampleRUM('cwv');
 
 function disqus() {
   // inject discuss script
-  const script = document.createElement('script');
-  script.src = 'https://https-main-impala-mkclawson-hlx-live.disqus.com/embed.js';
-  script.setAttribute('data-timestamp', +new Date());
-  (document.head || document.body).appendChild(script);
+  const scriptComments = document.createElement('script');
+  scriptComments.src = 'https://https-main-impala-mkclawson-hlx-live.disqus.com/embed.js';
+  scriptComments.setAttribute('data-timestamp', +new Date());
+  (document.head || document.body).appendChild(scriptComments);
 
   // Create details element
   const details = document.createElement('details');
@@ -27,6 +27,13 @@ function disqus() {
   // insert comments after loves
   const loves = document.querySelector('.blog-cards-parent');
   loves.insertAdjacentElement('afterend', details);
+
+  // add discuss counts
+  const scriptCount = document.createElement('script');
+  scriptCount.src = 'https://https-main-impala-mkclawson-hlx-live.disqus.com/count.js';
+  scriptCount.id = 'dsq-count-scr';
+  scriptCount.setAttribute('async', 'true');
+  (document.head || document.body).appendChild(scriptCount);
 }
 
 disqus();
