@@ -92,7 +92,6 @@ export function socialShareBlock(title, socials) {
 export default function decorate(block) {
   const template = getMetadata('template')
     .toLowerCase();
-  console.log(template);
 
   let title = '';
   if (block.querySelector('.social-share p')) {
