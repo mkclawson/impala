@@ -357,25 +357,6 @@ main > .section > .default-content-wrapper > p {
 }
 
 /* discuss commenting */
-details.disqus {
-  position: relative;
-  cursor: pointer;
-  text-align: left;
-  margin: 20px 0 0;
-}
-
-details.disqus summary {
-  max-width: 60%;
-  margin: auto;
-  padding: 10px 0;
-  border-bottom: 1px solid #ccc; 
-  font-size: 16px;
-}
-
-details.disqus summary:hover {
-  border-bottom: 1px solid #666;
-}
-
 /* stylelint-disable-next-line selector-id-pattern */
 #disqus_thread  {
   max-width: 60%;
