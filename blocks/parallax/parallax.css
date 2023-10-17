@@ -1,6 +1,6 @@
-.parallax {
+.parallax-background {
   /* Set a specific height */
-  min-height: 500px;
+  min-height: 1000px;
   /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
