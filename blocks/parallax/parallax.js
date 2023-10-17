@@ -31,7 +31,7 @@ export default async function decorate(block) {
   // Set the background image of the body to the imgSource
   //parallaxBackground.style.backgroundImage = `url(${imgSource})`;
   const columns = [...block.children];
-  const images = columns[1].querySelectorAll(':scope > div');
+  const images = columns[0].querySelectorAll(':scope > div');
   const [desktopImage] = images[0].querySelector('img').src.split('?');
   let multiplier = 0.4;
   // TODO: finish mobile image or delete
