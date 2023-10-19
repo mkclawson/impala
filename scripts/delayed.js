@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-cycle
-import { sampleRUM } from './lib-franklin.js';
+import { sampleRUM, getMetadata } from './lib-franklin.js';
 import { div } from './dom-helpers.js';
 
 // Core Web Vitals RUM collection
@@ -36,4 +36,4 @@ function disqus() {
   (document.head || document.body).appendChild(scriptCount);
 }
 
-disqus();
+if (getMetadata('template') === 'blog') disqus();
