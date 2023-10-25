@@ -1,12 +1,16 @@
 .parallax-background {
   /* Set a specific height */
-  min-height: 1100px;
+  min-height: 900px;
   /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.parallax {
+.section.parallax-container {
+  padding: 0px 0px;
+}
+
+.section .parallax-wrapper {
   max-width: 100%;
 }
