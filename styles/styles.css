@@ -33,7 +33,7 @@
   --body-font-family: 'Playfair display', 'Didot', 'Raleway', roboto, noto, sans-serif;
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
-  --default-content-font-family: normal normal normal 15px/1.875em raleway,sans-serif;
+  --default-content-font-family: raleway, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -295,8 +295,8 @@ main > .section > .default-content-wrapper > p {
   margin: auto;
   text-align: center;
   margin-top: 30px;
+  font-family: var(--default-content-font-family);
   font-size: var(--body-font-size-xs);
-  font: var(--default-content-font-family);
 }
 
 .blog main > .section > .default-content-wrapper > h1 {
