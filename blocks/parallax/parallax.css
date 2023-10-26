@@ -13,9 +13,3 @@
 .section .parallax-wrapper {
   max-width: 100%;
 }
-
-@media (max-width: 600px) {
-  .clearfix {
-    background-image: none;
-  }
-}
