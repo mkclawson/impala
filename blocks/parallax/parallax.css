@@ -1,0 +1,15 @@
+.parallax-background {
+  min-height: 900px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section.parallax-container {
+  /* stylelint-disable-next-line length-zero-no-unit */
+  padding: 0px;
+}
+
+.section .parallax-wrapper {
+  max-width: 100%;
+}
