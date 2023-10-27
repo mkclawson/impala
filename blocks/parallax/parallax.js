@@ -2,7 +2,7 @@ export default async function decorate(block) {
   // Select the picture element
   const picture = block.querySelector('picture');
   // Hide the picture element
-  picture.style.display = 'none';
+  // picture.style.display = 'none';
   // Get the image source of picture element
   const mobileImage = picture.querySelector('img').src;
   // Write mobileImage to the console
