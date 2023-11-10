@@ -5,10 +5,11 @@ async function getViewsLoves(row) {
   const viewspathname = '/views.json';
   const viewsresp = await fetch(viewspathname);
   const viewsjson = await viewsresp.json();
-  const currentUrl = window.location.href;
-  //console.log("currentUrl: "+ currentUrl);
-  const articleUrl = window.location.protocol + "//" + window.location.host + row.path;
-  //console.log("articleUrl: "+ articleUrl);
+
+  const articleProtocol = window.location.protocol;
+  const articleHost = window.location.host;
+  const articleUrl = articleProtocol.concat('//', articleHost, row.path);
+
   const viewline = viewsjson.data.find((view) => view.site === articleUrl);
   let viewsCount = 0;
   if (!viewline) {
@@ -43,7 +44,7 @@ async function getViewsLoves(row) {
   const recentArticle = {};
   recentArticle.views = viewsCount;
   recentArticle.loves = lovesCount;
-  //console.log("viewsCount: "+ viewsCount);
+  // console.log("viewsCount: "+ viewsCount);
   return recentArticle;
 }
 
@@ -54,10 +55,9 @@ function createCard(row, style) {
   const cardContent = document.createElement('div');
   cardContent.classList.add('card-content');
   getViewsLoves(row).then(
-    function(recentArticle) { cardContent.innerHTML = `<h3><a href="${row.path}">${row.title}</a></h3> <div><a href="${row.path}#disqus_thread" class="count"></a><span class="views"><img src="/icons/views.svg"/><label>${recentArticle.views}</label></span><span class="loves-recent"><button class="button">♡</button><label id="loves-recent">${recentArticle.loves}</label></span></div>`;},
-    function(error) { cardContent.innerHTML = `<h3><a href="${row.path}">${row.title}</a></h3> <div><a href="${row.path}#disqus_thread" class="count"></a><span class="views"><img src="/icons/views.svg"/><label>0</label></span><span class="loves-recent"><button class="button">♡</button><label id="loves-recent">0</label></span></div>`;}
+    (recentArticle) => { cardContent.innerHTML = `<h3><a href="${row.path}">${row.title}</a></h3> <div><a href="${row.path}#disqus_thread" class="count"></a><span class="views"><img src="/icons/views.svg"/><label>${recentArticle.views}</label></span><span class="loves-recent"><button class="button">♡</button><label id="loves-recent">${recentArticle.loves}</label></span></div>`; },
+    (error) => { cardContent.innerHTML = `<h3><a href="${row.path}">${row.title}</a></h3> <div><a href="${row.path}#disqus_thread" class="count"></a><span class="views"><img src="/icons/views.svg"/><label>${error}</label></span><span class="loves-recent"><button class="button">♡</button><label id="loves-recent">${error}</label></span></div>`; },
   );
-  //cardContent.innerHTML = `<h3><a href="${row.path}">${row.title}</a></h3> <div><a href="${row.path}#disqus_thread" class="count"></a><span class="views"><img src="/icons/views.svg"/><label>${views}</label></span></div>`;
   card.append(cardContent);
   return (card);
 }
