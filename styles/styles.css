@@ -263,7 +263,7 @@ body.home{
 
 main > .section > .default-content-wrapper a {
   font-weight: bold;
-  color:rgb(154, 201, 249);
+  color:rgb(154 201 249);
 }
 
 main > .section > .default-content-wrapper > h1 {
