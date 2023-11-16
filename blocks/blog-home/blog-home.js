@@ -1,5 +1,6 @@
 import { getAllBlogs } from '../../scripts/scripts.js';
 import { createOptimizedPicture } from '../../scripts/lib-franklin.js';
+import { getViewsLoves } from '../recent-posts/recent-posts.js';
 
 function createCard(row, style) {
   const card = document.createElement('div');
@@ -26,6 +27,15 @@ function createCard(row, style) {
   if (row.title) link.innerHTML = `<h5>${row.title}</h5>`;
   cardContent.append(link);
   if (row.description) link.innerHTML += `<p>${row.description}</p>`;
+
+  const cardSocialStats = document.createElement('div');
+  cardSocialStats.classList.add('blog-social');
+  getViewsLoves(row).then(
+    (recentArticle) => { cardSocialStats.innerHTML = `<a href="${row.path}#disqus_thread" id="disqus" class="count"></a><span class="views"><img alt="views" class="image" src="/icons/views.svg"/><label>${recentArticle.views}</label></span><span class="loves-recent"><button class="button">♡</button><label id="loves-recent">${recentArticle.loves}</label></span>`; },
+    (error) => { cardSocialStats.innerHTML = `<a href="${row.path}#disqus_thread" id="disqus" class="count"></a><span class="views"><img alt="views" src="/icons/views.svg"/><label>${error}</label></span><span class="loves-recent"><button class="button">♡</button><label id="loves-recent">${error}</label></span>`; },
+  );
+  cardContent.append(cardSocialStats);
+
   card.append(cardContent);
   return (card);
 }
