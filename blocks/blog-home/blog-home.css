@@ -158,9 +158,8 @@
         text-align: left;
     }
 
-    .blog-home[data-block-status="loaded"] > .blog-card picture img {
-      object-fit: cover;
-      max-width: 100%;
+    .blog-home[data-block-status="loaded"] > .blog-card img {
+      object-fit: cover; 
       height: 100%;
       width: 100%;
     }

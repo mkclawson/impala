@@ -31,8 +31,8 @@ function createCard(row, style) {
   const cardSocialStats = document.createElement('div');
   cardSocialStats.classList.add('blog-social');
   getViewsLoves(row).then(
-    (recentArticle) => { cardSocialStats.innerHTML = `<a href="${row.path}#disqus_thread" id="disqus" class="count"></a><span class="views"><img alt="views" class="image" src="/icons/views.svg"/><label>${recentArticle.views}</label></span><span class="loves-recent"><button class="button">♡</button><label id="loves-recent">${recentArticle.loves}</label></span>`; },
-    (error) => { cardSocialStats.innerHTML = `<a href="${row.path}#disqus_thread" id="disqus" class="count"></a><span class="views"><img alt="views" src="/icons/views.svg"/><label>${error}</label></span><span class="loves-recent"><button class="button">♡</button><label id="loves-recent">${error}</label></span>`; },
+    (recentArticle) => { cardSocialStats.innerHTML = `<a href="${row.path}#disqus_thread" id="disqus" class="count"></a><span class="views"><label>${recentArticle.views}</label><label>&nbspviews</label></span><span class="loves-recent"><button class="button">♡</button><label id="loves-recent">${recentArticle.loves}</label></span>`; },
+    (error) => { cardSocialStats.innerHTML = `<a href="${row.path}#disqus_thread" id="disqus" class="count"></a><span class="views"><label>${error}</label><label>&nbspviews</label></span><span class="loves-recent"><button class="button">♡</button><label id="loves-recent">${error}</label></span>`; },
   );
   cardContent.append(cardSocialStats);
 
