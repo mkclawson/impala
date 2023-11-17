@@ -12,7 +12,7 @@
 
  :root {
   /* colors */
-  --link-color: #035fe6;
+  --link-color: #0e397a;
   --link-hover-color: #136ff6;
   --background-color: #FFF;
   --overlay-background-color: #000;
@@ -261,6 +261,11 @@ body.home{
   color: var(--text-white);
 }
 
+main > .section > .default-content-wrapper a {
+  font-weight: bold;
+  color:rgb(154 201 249);
+}
+
 main > .section > .default-content-wrapper > h1 {
   font-weight: normal;
 }
@@ -277,6 +282,11 @@ main > .section > .default-content-wrapper > h4 {
   line-height: 1.6;
   }
 
+  .section > .default-content-wrapper > h2 {
+  max-width: 60%;
+  margin: auto;
+  text-align: left;
+  }
 
   main > .section > .default-content-wrapper > h3 {
   font-size: 20px;
@@ -285,9 +295,9 @@ main > .section > .default-content-wrapper > h4 {
 }
 
 main > .section > .default-content-wrapper > h2 {
-  max-width: 60%;
-  margin: auto;
-  text-align: left;
+  font-size: 20px;
+  font-family: 'GFS Didot', serif;
+  font-style: italic;
 }
 
 main > .section > .default-content-wrapper > p {
