@@ -158,8 +158,9 @@
         text-align: left;
     }
 
-    .blog-home[data-block-status="loaded"] > .blog-card img {
-      object-fit: cover; 
+    .blog-home[data-block-status="loaded"] > .blog-card picture img {
+      object-fit: cover;
+      max-width: 100%;
       height: 100%;
       width: 100%;
     }
