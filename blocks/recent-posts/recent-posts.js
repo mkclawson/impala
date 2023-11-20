@@ -1,7 +1,7 @@
 import { getAllBlogs } from '../../scripts/scripts.js';
 import { createOptimizedPicture, getMetadata } from '../../scripts/lib-franklin.js';
 
-async function getViewsLoves(row) {
+export async function getViewsLoves(row) {
   const viewspathname = '/views.json';
   const viewsresp = await fetch(viewspathname);
   const viewsjson = await viewsresp.json();
@@ -55,8 +55,8 @@ function createCard(row, style) {
   const cardContent = document.createElement('div');
   cardContent.classList.add('card-content');
   getViewsLoves(row).then(
-    (recentArticle) => { cardContent.innerHTML = `<h3><a href="${row.path}">${row.title}</a></h3> <div><a href="${row.path}#disqus_thread" class="count"></a><span class="views"><img src="/icons/views.svg"/><label>${recentArticle.views}</label></span><span class="loves-recent"><button class="button">♡</button><label id="loves-recent">${recentArticle.loves}</label></span></div>`; },
-    (error) => { cardContent.innerHTML = `<h3><a href="${row.path}">${row.title}</a></h3> <div><a href="${row.path}#disqus_thread" class="count"></a><span class="views"><img src="/icons/views.svg"/><label>${error}</label></span><span class="loves-recent"><button class="button">♡</button><label id="loves-recent">${error}</label></span></div>`; },
+    (recentArticle) => { cardContent.innerHTML = `<h3><a href="${row.path}">${row.title}</a></h3> <div><a href="${row.path}#disqus_thread" id="disqus-${row.path}" class="count"></a><span class="views"><img alt="views" src="/icons/views.svg"/><label>${recentArticle.views}</label></span><span class="loves-recent"><button class="button">♡</button><label id="loves-recent">${recentArticle.loves}</label></span></div>`; },
+    (error) => { cardContent.innerHTML = `<h3><a href="${row.path}">${row.title}</a></h3> <div><a href="${row.path}#disqus_thread" id="disqus-${row.path}" class="count"></a><span class="views"><img alt="views" src="/icons/views.svg"/><label>${error}</label></span><span class="loves-recent"><button class="button">♡</button><label id="loves-recent">${error}</label></span></div>`; },
   );
   card.append(cardContent);
   return (card);
