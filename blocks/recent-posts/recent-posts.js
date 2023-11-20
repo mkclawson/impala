@@ -51,7 +51,19 @@ export async function getViewsLoves(row) {
 function createCard(row, style) {
   const card = document.createElement('div');
   if (style) card.classList.add(style);
-  if (row.image && row.title) card.prepend(createOptimizedPicture(row.image));
+  const breakpoints = [
+    { media: '(min-width: 1200px)', width: '500' },
+    { media: '(min-width: 800px)', width: '400' },
+    { media: '(min-width: 700px)', width: '300' },
+    { media: '(min-width: 500px)', width: '250' },
+    { width: '500' }];
+  if (row.image && row.title) {
+    const optimisedPicture = createOptimizedPicture(row.image, row.description, false, breakpoints);
+    const imageNew = optimisedPicture.querySelector('img');
+    imageNew.setAttribute('width', imageNew.width);
+    imageNew.setAttribute('height', imageNew.height);
+    card.prepend(optimisedPicture);
+  }
   const cardContent = document.createElement('div');
   cardContent.classList.add('card-content');
   getViewsLoves(row).then(
