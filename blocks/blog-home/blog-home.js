@@ -11,15 +11,14 @@ function createCard(row, style, position) {
     { width: '500' }];
   const card = document.createElement('div');
   if (style) card.classList.add(style);
-  console.log('widht es'+row.image.width+" height es"+row.image.height);
-  if (row.image && row.title){
-  const optimisedPicture=createOptimizedPicture(row.image, row.description, row.image.width, row.image.height, false, breakpoints);
-  var imageNew=optimisedPicture.querySelector('img');
-  imageNew.setAttribute('width',imageNew.width);
-  imageNew.setAttribute('height',imageNew.height);
-  card.prepend(optimisedPicture);
+  console.log('widht es' + row.image.width + " height es" + row.image.height);
+  if (row.image && row.title) {
+    const optimisedPicture = createOptimizedPicture(row.image, row.description, false, breakpoints);
+    var imageNew = optimisedPicture.querySelector('img');
+    imageNew.setAttribute('width', imageNew.width);
+    imageNew.setAttribute('height', imageNew.height);
+    card.prepend(optimisedPicture);
   }
-  //if (row.image && row.title) card.prepend(createOptimizedPicture(row.image, row.description, row.image.width, row.image.height, false, breakpoints));
   const cardContent = document.createElement('div');
   cardContent.classList.add('card-content');
   const author = document.createElement('div');
