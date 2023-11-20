@@ -2,7 +2,7 @@ import { getAllBlogs } from '../../scripts/scripts.js';
 import { createOptimizedPicture } from '../../scripts/lib-franklin.js';
 import { getViewsLoves } from '../recent-posts/recent-posts.js';
 
-function createCard(row, style) {
+function createCard(row, style, position) {
   const card = document.createElement('div');
   if (style) card.classList.add(style);
   if (row.image && row.title) card.prepend(createOptimizedPicture(row.image));
@@ -31,8 +31,8 @@ function createCard(row, style) {
   const cardSocialStats = document.createElement('div');
   cardSocialStats.classList.add('blog-social');
   getViewsLoves(row).then(
-    (recentArticle) => { cardSocialStats.innerHTML = `<a href="${row.path}#disqus_thread" id="disqus" class="count"></a><span class="views"><label>${recentArticle.views}</label><label>&nbspviews</label></span><span class="loves-recent"><button class="button">♡</button><label id="loves-recent">${recentArticle.loves}</label></span>`; },
-    (error) => { cardSocialStats.innerHTML = `<a href="${row.path}#disqus_thread" id="disqus" class="count"></a><span class="views"><label>${error}</label><label>&nbspviews</label></span><span class="loves-recent"><button class="button">♡</button><label id="loves-recent">${error}</label></span>`; },
+    (recentArticle) => { cardSocialStats.innerHTML = `<span class="views"><label>${recentArticle.views}</label><label>&nbspviews</label></span><a href="${row.path}#disqus_thread" id="disqus-${position}" class="count"></a><span class="loves-recent"><button class="button">♡</button><label id="loves-recent">${recentArticle.loves}</label></span>`; },
+    (error) => { cardSocialStats.innerHTML = `<span class="views"><label>${error}</label><label>&nbspviews</label></span><a href="${row.path}#disqus_thread" id="disqus" class="count"></a><span class="loves-recent"><button class="button">♡</button><label id="loves-recent">${error}</label></span>`; },
   );
   cardContent.append(cardSocialStats);
 
@@ -47,9 +47,11 @@ export default async function decorate(block) {
   if (blogList.length) {
     // eslint-disable-next-line
     const sortBl = blogList.sort((objA, objB) => Number(new Date(objB.published)) - Number(new Date(objA.published)));
+    let position = 0;
     sortBl.forEach((row) => {
       if (/^\/blog\/[\d\w]/.test(row.path)) {
-        block.append(createCard(row, 'blog-card'));
+        block.append(createCard(row, 'blog-card', position));
+        position += 1;
       }
     });
   } else {
