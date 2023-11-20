@@ -1,6 +1,6 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: #000;
+  background-color:rgba(0 0 0 / 60%);
   width: 100%;
   z-index: 2;
   position: fixed;
@@ -91,7 +91,7 @@ header nav .nav-hamburger-icon::before,
 header nav .nav-hamburger-icon::after {
   content: '';
   position: absolute;
-  background: currentcolor;
+  background: var(--overlay-background-color);
 }
 
 header nav[aria-expanded="false"] .nav-hamburger-icon,
@@ -99,7 +99,7 @@ header nav[aria-expanded="false"] .nav-hamburger-icon::before,
 header nav[aria-expanded="false"] .nav-hamburger-icon::after {
   height: 2px;
   border-radius: 2px;
-  background: currentcolor;
+  background: var(--overlay-background-color);
 }
 
 header nav[aria-expanded="false"] .nav-hamburger-icon::before {

@@ -1,22 +1,26 @@
 export default async function decorate(block) {
   // Select the picture element
   const picture = block.querySelector('picture');
-  // Hide the picture element
-  picture.style.display = 'none';
-  // Get the image source of picture element
-  const mobileImage = picture.querySelector('img').src;
-  // Write mobileImage to the console
-  // console.log(mobileImage);
-  const columns = [...block.children];
-  const images = columns[0].querySelectorAll(':scope > div');
-  const [desktopImage] = images[0].querySelector('img').src.split('?');
-  // Write desktopImage to the console
-  // console.log(desktopImage);
-  const parallaxBlock = document.createElement('div');
-  parallaxBlock.classList.add('parallax-background');
-  parallaxBlock.style.backgroundImage = `url(${desktopImage})`;
-  if (window.innerWidth < 900) {
-    parallaxBlock.style.backgroundImage = `url(${mobileImage})`;
-  }
-  block.append(parallaxBlock);
+  picture.classList.add('parallax-image');
+
+  // Main parallax effect
+  window.addEventListener('scroll', () => {
+    const parallaxImage = document.querySelector('.parallax-image');
+    const defaultContent = document.querySelector('.default-content-wrapper');
+    const footer = document.querySelector('.footer-wrapper');
+    const elementScrollY = window.scrollY;
+
+    // Adjust the depth and direction of the image movement (slower)
+    const imageMovement = -elementScrollY * 0.08; // Multiply by -1 to move the image upward
+
+    // Adjust the depth and direction of the text movement (faster)
+    const textMovement = -elementScrollY * 0.3; // Multiply by -1 to move the text upward faster
+
+    // Calculate the depth and direction of the footer movement (even faster)
+    const footerMovement = -elementScrollY * 0.3;
+
+    parallaxImage.style.transform = `translate3d(0, ${imageMovement}px, 0)`;
+    defaultContent.style.transform = `translate3d(0, ${textMovement}px, 0)`;
+    footer.style.transform = `translate3d(0, ${footerMovement}px, 0)`;
+  });
 }
