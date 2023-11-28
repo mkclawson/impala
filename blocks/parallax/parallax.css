@@ -1,6 +1,7 @@
 .section.parallax-container {
   /* stylelint-disable-next-line length-zero-no-unit */
   padding: 0px;
+  padding-top: var(--nav-height);
   height: 100%;
   margin: 0;
   overflow: hidden;

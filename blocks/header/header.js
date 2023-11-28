@@ -1,8 +1,7 @@
-import { getMetadata, readBlockConfig, decorateIcons } from '../../scripts/lib-franklin.js';
+import { getMetadata, decorateIcons } from '../../scripts/lib-franklin.js';
 
 // media query match that indicates mobile/tablet width
 const MQ = window.matchMedia('(min-width: 900px)');
-const LANG_REGEX = /\/[a-z]{2}-[a-z]{2}\//;
 
 function closeOnEscape(e) {
   if (e.code === 'Escape') {
@@ -91,9 +90,6 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
  * @param {Element} block The header block element
  */
 export default async function decorate(block) {
-  const config = readBlockConfig(block);
-  block.textContent = '';
-
   // fetch nav content
   const navMeta = getMetadata('nav');
   const navPath = navMeta ? new URL(navMeta).pathname : '/Drafts/alvaro/nav';
@@ -112,7 +108,6 @@ export default async function decorate(block) {
       if (section) section.classList.add(`nav-${c}`);
     });
 
-
     const navSections = nav.querySelector('.nav-sections');
     console.log(navSections);
     if (navSections) {
@@ -127,9 +122,6 @@ export default async function decorate(block) {
         });
       });
     }
-
-
-
 
     // hamburger for mobile
     const hamburger = document.createElement('div');
@@ -152,7 +144,6 @@ export default async function decorate(block) {
     const mobileNavTop = mobileNav.querySelector('.mobile-nav > div:first-child > div');
     mobileNavTop.classList.add('mobile-nav-top', 'nav-hamburger');
     mobileNavTop.appendChild(closeButton);
-
 
     decorateIcons(nav);
     block.append(nav);

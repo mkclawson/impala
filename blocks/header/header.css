@@ -166,6 +166,7 @@ header nav[aria-expanded="true"] .nav-sections {
   justify-content: flex-end;
   gap: 30px;
   align-self: start;
+  align-self: unset;
 }
 
 header nav .mobile-nav ul {
@@ -183,6 +184,10 @@ header nav .nav-sections ul {
   padding-left: 0;
   font-size: var(--body-font-size-s);
   font-weight: 500;
+  display: flex;
+  gap: 2em;
+  margin: 0;
+  justify-content: flex-end;
 }
 
 header nav .nav-sections ul>li {
@@ -193,18 +198,20 @@ header nav .nav-sections ul>li>ul {
   margin-top: 0;
 }
 
-header nav .nav-sections ul>li>ul>li {
+header nav .nav-sections>ul>li {
+  flex: 0 1 auto;
+  position: relative;
   font-weight: 500;
 }
 
-header nav[aria-expanded="true"] .nav-sections {
-  align-self: unset;
+header nav .nav-sections>ul>li>ul {
+  display: none;
+  position: relative;
 }
 
-header nav[aria-expanded="true"] .nav-sections {
-  align-self: unset;
+header nav .nav-sections ul>li>ul>li {
+  font-weight: 500;
 }
-
 
 header nav .nav-sections .nav-drop {
   position: relative;
@@ -232,24 +239,6 @@ header nav .nav-sections .nav-drop[aria-expanded="true"]::after {
   transform: rotate(315deg);
 }
 
-header nav .nav-sections ul {
-  display: flex;
-  gap: 2em;
-  margin: 0;
-  font-size: var(--body-font-size-xs);
-  justify-content: flex-end;
-}
-
-header nav .nav-sections>ul>li {
-  flex: 0 1 auto;
-  position: relative;
-  font-weight: 500;
-}
-
-header nav .nav-sections>ul>li>ul {
-  display: none;
-  position: relative;
-}
 
 header nav .nav-sections>ul>li[aria-expanded="true"]>ul {
   display: block;
@@ -428,7 +417,7 @@ header nav span.mobile-nav-selector-arrow {
 }
 
 @media (max-width: 900px) {
-  header nav[aria-expanded=true] .mobile-nav-overlay {
+  header nav[aria-expanded="true"] .mobile-nav-overlay {
     display: inline-block;
   }
 
