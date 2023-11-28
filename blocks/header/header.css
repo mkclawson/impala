@@ -1,6 +1,6 @@
 /* header and nav layout */
-header .nav-wrapper {
-  background-color:rgba(0 0 0 / 60%);
+.header-wrapper {
+  background-color:rgba(0 0 0 );
   width: 100%;
   z-index: 2;
   position: fixed;
@@ -153,12 +153,32 @@ header nav .nav-brand img {
 }
 
 /* sections */
-header nav .nav-sections {
+@media (max-width: 900px) {
+ header nav .nav-sections {
   grid-area: sections;
   flex: 1 1 auto;
   display: none;
   visibility: hidden;
   background-color: var(--overlay-color);
+}
+}
+
+header nav[aria-expanded="true"] .nav-sections {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  visibility: visible;
+  align-self: start;
+}
+
+header nav .mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav .mobile-nav li {
+  padding-top: var(--spacing-xm);
 }
 
 header nav[aria-expanded="true"] .nav-sections {
@@ -188,12 +208,9 @@ header nav .nav-sections ul > li > ul > li {
   font-weight: 500;
 }
 
-@media (min-width: 900px) {
-  header nav .nav-sections {
-    display: block;
-    visibility: visible;
-    white-space: nowrap;
-  }
+header nav[aria-expanded="true"] .nav-sections {
+  align-self: unset;
+}
 
   header nav[aria-expanded="true"] .nav-sections {
     align-self: unset;
@@ -275,4 +292,159 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+}
+
+header nav .mobile-nav-overlay {
+  display: none;
+  background-color: rgb(0 0 0 / 80%);
+  z-index: 1002;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+header nav .mobile-nav {
+  background-color: black;
+  width: 50%;
+  height: 100%;
+  border-radius: 3px;
+  padding: 25px 30px calc(4vh + 43px) 30px;
+  overflow: auto;
+}
+
+header nav .mobile-nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: normal;
+  margin-bottom: 10px;
+  height: 100%;
+}
+
+header nav .mobile-nav > div:nth-child(2) > div {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header nav .mobile-nav p {
+  margin-top: 24px;
+  font-size: 14px;
+}
+
+header nav .mobile-nav > div:nth-child(2) p {
+  margin-top: 0;
+}
+
+header nav .mobile-nav > div:nth-child(2) > div p {
+  width: 100%;
+}
+
+header nav .mobile-nav > div:last-child > div {
+  position: relative;
+}
+
+header nav .mobile-nav > div:nth-child(2) > div p:last-child {
+  width: auto;
+  margin-top: 8px;
+  font-size: var(--body-font-size-xxs);
+}
+
+header nav .mobile-nav a {
+  color: white;
+  font-size: var(--font-size-medium);
+}
+
+header nav .mobile-nav > div:nth-child(2) a {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--link-highlight-color);
+  border-radius: 4px;
+  box-shadow: none;
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+  min-height: 48px;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: none;
+  line-height: normal;
+}
+
+
+header nav .mobile-nav > div:nth-child(2) p:nth-child(odd) a {
+  color: var(--link-highlight-color);
+}
+
+header nav .mobile-nav > div:nth-child(2) p:nth-child(even) a {
+  background-clip: padding-box;
+  background-color: var(--link-highlight-color);
+  color: var(--background-color)
+}
+
+header nav .mobile-nav h3 {
+  color: var(--font-black);
+  font-size: var(--font-size-medium);
+  margin-top: 32px;
+}
+
+header nav .mobile-nav select {
+  font-size: var(--font-size-medium);
+  font-family: 'Open Sans', sans-serif;
+  border: 1px solid var(--header-nav-language-select);
+  border-radius: 3px;
+  height: 54px;
+  margin-top: 10px;
+  color: var(--font-black);
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  padding: 8px 30px 8px 10px;
+  appearance: none;
+}
+
+header nav .mobile-nav select:active,
+header nav .mobile-nav select:focus {
+  box-shadow: none;
+  outline: none;
+  border-color: var(--link-color);
+}
+
+header nav span.mobile-nav-selector-arrow {
+  position: absolute;
+  right: 15px;
+  top: 57%;
+  border: solid var(--font-black);
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 4.5px;
+  transform: rotate(45deg);
+  margin-left: var(--spacing-mini);
+}
+
+@media (max-width: 685px) {
+  header nav .mobile-nav {
+    width: 60%;
+  }
+}
+
+@media (max-width: 560px) {
+  header nav .mobile-nav {
+    width: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  header nav[aria-expanded=true] .mobile-nav-overlay {
+    display: inline-block;
+  }
+
+  header nav .nav-top-bar,
+  header nav .nav-login {
+    display: none;
+  }
+
 }
