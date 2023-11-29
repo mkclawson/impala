@@ -10,7 +10,8 @@ header nav {
   box-sizing: border-box;
   display: grid;
   grid-template:
-    'hamburger brand tools' var(--nav-height) 'sections sections sections' 1fr / auto 1fr auto;
+    'hamburger brand tools' var(--nav-height)
+    'sections sections sections' 1fr / auto 1fr auto;
   align-items: center;
   gap: 0 2em;
   margin: auto;
@@ -22,7 +23,8 @@ header nav {
 
 header nav[aria-expanded="true"] {
   grid-template:
-    'hamburger brand' var(--nav-height) 'sections sections' 1fr
+    'hamburger brand' var(--nav-height)
+    'sections sections' 1fr
     'tools tools' var(--nav-height) / auto 1fr;
   overflow-y: auto;
   min-height: 100vh;
@@ -175,10 +177,6 @@ header nav .mobile-nav ul {
   margin: 0;
 }
 
-header nav .mobile-nav li {
-  padding-top: var(--spacing-xm);
-}
-
 header nav .nav-sections ul {
   list-style: none;
   padding-left: 0;
@@ -202,11 +200,6 @@ header nav .nav-sections>ul>li {
   flex: 0 1 auto;
   position: relative;
   font-weight: 500;
-}
-
-header nav .nav-sections>ul>li>ul {
-  display: none;
-  position: relative;
 }
 
 header nav .nav-sections ul>li>ul>li {
@@ -239,6 +232,10 @@ header nav .nav-sections .nav-drop[aria-expanded="true"]::after {
   transform: rotate(315deg);
 }
 
+header nav .nav-sections>ul>li>ul {
+  display: none;
+  position: relative;
+}
 
 header nav .nav-sections>ul>li[aria-expanded="true"]>ul {
   display: block;
@@ -274,7 +271,7 @@ header nav .nav-tools {
 
 header nav .mobile-nav-overlay {
   display: none;
-  background-color: rgb(0 0 0 / 80%);
+  background-color: rgb(0 0 0 / 50%);
   z-index: 1002;
   position: fixed;
   top: 0;
@@ -284,7 +281,7 @@ header nav .mobile-nav-overlay {
 }
 
 header nav .mobile-nav {
-  background-color: black;
+  background-color: var(--overlay-background-color);
   width: 50%;
   height: 100%;
   border-radius: 3px;
@@ -307,101 +304,23 @@ header nav .mobile-nav>div:nth-child(2)>div {
   align-items: center;
 }
 
-header nav .mobile-nav p {
-  margin-top: 24px;
-  font-size: 14px;
-}
-
-header nav .mobile-nav>div:nth-child(2) p {
-  margin-top: 0;
-}
-
-header nav .mobile-nav>div:nth-child(2)>div p {
-  width: 100%;
-}
-
-header nav .mobile-nav>div:last-child>div {
-  position: relative;
-}
-
-header nav .mobile-nav>div:nth-child(2)>div p:last-child {
-  width: auto;
-  margin-top: 8px;
-  font-size: var(--body-font-size-xxs);
-}
-
 header nav .mobile-nav a {
-  color: white;
-  font-size: var(--font-size-medium);
+  color: var(--text-white);
+  font-size: var(--heading-font-size-s);
 }
 
 header nav .mobile-nav>div:nth-child(2) a {
   display: block;
   width: 100%;
-  border: 1px solid var(--link-highlight-color);
+  border: 1px;
   border-radius: 4px;
   box-shadow: none;
-  font-size: var(--font-size-medium);
-  font-weight: var(--font-weight-bold);
   min-height: 48px;
-  text-transform: capitalize;
   padding: 10px 20px;
   text-align: center;
   margin-top: 10px;
-  text-decoration: none;
   line-height: normal;
-}
-
-
-header nav .mobile-nav>div:nth-child(2) p:nth-child(odd) a {
-  color: var(--link-highlight-color);
-}
-
-header nav .mobile-nav>div:nth-child(2) p:nth-child(even) a {
-  background-clip: padding-box;
-  background-color: var(--link-highlight-color);
-  color: var(--background-color)
-}
-
-header nav .mobile-nav h3 {
-  color: var(--font-black);
-  font-size: var(--font-size-medium);
-  margin-top: 32px;
-}
-
-header nav .mobile-nav select {
-  font-size: var(--font-size-medium);
-  font-family: 'Open Sans', sans-serif;
-  border: 1px solid var(--header-nav-language-select);
-  border-radius: 3px;
-  height: 54px;
-  margin-top: 10px;
-  color: var(--font-black);
-  width: 100%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  text-align: center;
-  padding: 8px 30px 8px 10px;
-  appearance: none;
-}
-
-header nav .mobile-nav select:active,
-header nav .mobile-nav select:focus {
-  box-shadow: none;
-  outline: none;
-  border-color: var(--link-color);
-}
-
-header nav span.mobile-nav-selector-arrow {
-  position: absolute;
-  right: 15px;
-  top: 57%;
-  border: solid var(--font-black);
-  border-width: 0 1px 1px 0;
-  display: inline-block;
-  padding: 4.5px;
-  transform: rotate(45deg);
-  margin-left: var(--spacing-mini);
+  color: var(--text-white);
 }
 
 @media (max-width: 685px) {
@@ -419,11 +338,6 @@ header nav span.mobile-nav-selector-arrow {
 @media (max-width: 900px) {
   header nav[aria-expanded="true"] .mobile-nav-overlay {
     display: inline-block;
-  }
-
-  header nav .nav-top-bar,
-  header nav .nav-login {
-    display: none;
   }
 
 }
