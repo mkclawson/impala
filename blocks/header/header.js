@@ -102,7 +102,6 @@ export default async function decorate(block) {
     const nav = document.createElement('nav');
     nav.id = 'nav';
     nav.innerHTML = html;
-
     const classes = ['brand', 'sections', 'tools'];
     classes.forEach((c, i) => {
       const section = nav.children[i];
@@ -135,6 +134,16 @@ export default async function decorate(block) {
     // prevent mobile nav behavior on window resize
     toggleMenu(nav, navSections, isDesktop.matches);
     isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
+    if (nav.querySelector('.mobile-nav')) {
+      const mobileNav = nav.querySelector('.mobile-nav').parentElement;
+      mobileNav.classList.add('mobile-nav-overlay');
+      const closeButton = nav.querySelector('.nav-hamburger button').cloneNode(true);
+      closeButton.addEventListener('click', () => toggleMenu(nav, navSections));
+      const mobileNavTop = mobileNav.querySelector('.mobile-nav > div:first-child > div');
+      mobileNavTop.classList.add('mobile-nav-top', 'nav-hamburger');
+      const anchorElement = mobileNavTop.querySelector('a');
+      mobileNavTop.insertBefore(closeButton, anchorElement);
+    }
 
     decorateIcons(nav);
     const navWrapper = document.createElement('div');

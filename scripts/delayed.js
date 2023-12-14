@@ -36,4 +36,14 @@ function disqus() {
   (document.head || document.body).appendChild(scriptCount);
 }
 
+function disqusbloghome() {
+  // add discuss counts
+  const scriptCount = document.createElement('script');
+  scriptCount.src = 'https://https-main-impala-mkclawson-hlx-live.disqus.com/count.js';
+  scriptCount.id = 'dsq-count-scr';
+  scriptCount.setAttribute('async', 'true');
+  (document.head || document.body).appendChild(scriptCount);
+}
+
 if (getMetadata('template') === 'blog') disqus();
+if (getMetadata('template') === 'blog-home') disqusbloghome();

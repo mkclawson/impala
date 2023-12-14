@@ -1,6 +1,6 @@
 function createSelect(fd) {
   const select = document.createElement('select');
-  select.id = fd.Field;
+  select.id = `${fd.Field}`;
   if (fd.Placeholder) {
     const ph = document.createElement('option');
     ph.textContent = fd.Placeholder;

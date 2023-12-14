@@ -1,15 +1,13 @@
-.parallax-background {
-  min-height: 900px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .section.parallax-container {
   /* stylelint-disable-next-line length-zero-no-unit */
   padding: 0px;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
 }
 
-.section .parallax-wrapper {
-  max-width: 100%;
+.default-content-wrapper {
+  font-size: 2rem;
+  color: white;
+  background-color: black;
 }
